@@ -8,8 +8,8 @@ define("RocaAmortizationApp_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 					"columns": [
 						{
 							"id": "f252f581-0ccf-44ac-b7c9-c00df2ad9919",
-							"code": "PDS_RocaAmortizationNumber",
-							"caption": "#ResourceString(PDS_RocaAmortizationNumber)#",
+							"code": "PDS_RocaName",
+							"caption": "#ResourceString(PDS_RocaName)#",
 							"dataValueType": 1
 						},
 						{
@@ -34,7 +34,7 @@ define("RocaAmortizationApp_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 					"clicked": {
 						"request": "crt.ImportDataRequest",
 						"params": {
-							"entitySchemaName": "RocaLoanAmortizationTable"
+							"entitySchemaName": "RocaAmortParameters"
 						}
 					}
 				}
@@ -44,7 +44,7 @@ define("RocaAmortizationApp_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 				"name": "FolderTree",
 				"values": {
 					"sourceSchemaName": "FolderTree",
-					"rootSchemaName": "RocaLoanAmortizationTable"
+					"rootSchemaName": "RocaAmortParameters"
 				}
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
@@ -58,9 +58,9 @@ define("RocaAmortizationApp_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 					"attributes"
 				],
 				"values": {
-					"PDS_RocaAmortizationNumber": {
+					"PDS_RocaName": {
 						"modelConfig": {
-							"path": "PDS.RocaAmortizationNumber"
+							"path": "PDS.RocaName"
 						}
 					},
 					"PDS_CreatedOn": {
@@ -85,7 +85,7 @@ define("RocaAmortizationApp_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 					"config"
 				],
 				"values": {
-					"entitySchemaName": "RocaLoanAmortizationTable"
+					"entitySchemaName": "RocaAmortParameters"
 				}
 			}
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,

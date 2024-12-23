@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Amortization Parameters" />
+			<Item Name="Columns.Roca1stDisbursementDate.Caption" Value="1st Disbursement Date" />
+			<Item Name="Columns.Roca1stDisbursementDate.Description" Value="1st Disbursement Date" />
+			<Item Name="Columns.Roca1stRepaymentDate.Caption" Value="1st Repayment Date" />
+			<Item Name="Columns.Roca1stRepaymentDate.Description" Value="1st Repayment Date " />
+			<Item Name="Columns.RocaAmortizationTable.Caption" Value="Amortization Table" />
+			<Item Name="Columns.RocaAmortizationTable.Description" Value="Amortization Table" />
+			<Item Name="Columns.RocaCompundFrequency.Caption" Value="Compound Frequency" />
+			<Item Name="Columns.RocaCompundFrequency.Description" Value="Compound Frequency" />
+			<Item Name="Columns.RocaGracePeriodCycle.Caption" Value="Grace Period Cycle" />
+			<Item Name="Columns.RocaGracePeriodCycle.Description" Value="Grace Period Cycle" />
+			<Item Name="Columns.RocaGracePeriodInMonths.Caption" Value="Grace Period In Months" />
+			<Item Name="Columns.RocaGracePeriodInMonths.Description" Value="Grace Period In Months" />
+			<Item Name="Columns.RocaGracePeriodIntMethod.Caption" Value="Grace Period Interest Method" />
+			<Item Name="Columns.RocaGracePeriodIntMethod.Description" Value="Grace Period Interest Method" />
+			<Item Name="Columns.RocaInterestRate.Caption" Value="Rate" />
+			<Item Name="Columns.RocaInterestRate.Description" Value="Rate" />
+			<Item Name="Columns.RocaLoanAmount.Caption" Value="Loan Amount" />
+			<Item Name="Columns.RocaLoanAmount.Description" Value="Loan Amount" />
+			<Item Name="Columns.RocaLoanTermInMonths.Caption" Value="Loan Term in Months" />
+			<Item Name="Columns.RocaLoanTermInMonths.Description" Value="Loan Term in Months" />
+			<Item Name="Columns.RocaLoanType.Caption" Value="Loan Type" />
+			<Item Name="Columns.RocaLoanType.Description" Value="Loan Type" />
+			<Item Name="Columns.RocaName.Caption" Value="Name" />
+			<Item Name="Columns.RocaName.Description" Value="Name" />
+			<Item Name="Columns.RocaPaymentFrequency.Caption" Value="Payment Frequency" />
+			<Item Name="Columns.RocaPaymentFrequency.Description" Value="Payment Frequency" />
+			<Item Name="Description" Value="Amortization Parameters" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
+		</Items>
+	</Group>
+</Resources>

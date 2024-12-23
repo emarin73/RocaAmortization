@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "4afec763-4162-49be-9143-350677d2726f",
+    "Name": "RocaAmortizationApp_FormPageBusinessRule",
+    "ModifiedOnUtc": "\/Date(1734923043000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Amortization App form page (Business rules)",
+    "DependsOn": []
+  }
+}

@@ -3,6 +3,14 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Amortization App form page" />
+			<Item Name="LocalizableStrings.addRecord_28j3zov_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_5jmhtdy_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_8aaulyv_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_kogwa7x_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_qsgrdf4_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.Button_c1nvssu_caption.Value" Value="Calculate" />
+			<Item Name="LocalizableStrings.Label_72l2nd5_caption.Value" Value="Grace Period Parameters" />
+			<Item Name="LocalizableStrings.Label_LoanParam_caption.Value" Value="Loan Parameters" />
 		</Items>
 	</Group>
 </Resources>

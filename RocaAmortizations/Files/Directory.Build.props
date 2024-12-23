@@ -1,11 +1,14 @@
 <Project>
 	<ItemGroup Label="Entity Files" Condition="'$(PkgPath)' != ''">
+		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaAmortParameters/RocaAmortParameters.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaAmortParameters/RocaAmortParameters.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaCollateralAllocSource/RocaCollateralAllocSource.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaCollateralAllocSource/RocaCollateralAllocSource.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaCollaterals/RocaCollaterals.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaCollaterals/RocaCollaterals.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaCollateralType/RocaCollateralType.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaCollateralType/RocaCollateralType.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaColLocationOfSecurity/RocaColLocationOfSecurity.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaColLocationOfSecurity/RocaColLocationOfSecurity.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaColStatus/RocaColStatus.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaColStatus/RocaColStatus.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaColTypeClassification/RocaColTypeClassification.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaColTypeClassification/RocaColTypeClassification.cs')" />
+		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaCompoundFrequency/RocaCompoundFrequency.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaCompoundFrequency/RocaCompoundFrequency.cs')" />
+		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaGracePeriodCycle/RocaGracePeriodCycle.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaGracePeriodCycle/RocaGracePeriodCycle.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaGracePeriodIntMethod/RocaGracePeriodIntMethod.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaGracePeriodIntMethod/RocaGracePeriodIntMethod.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaInquiryStatus/RocaInquiryStatus.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaInquiryStatus/RocaInquiryStatus.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaIntCalcMethod/RocaIntCalcMethod.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaIntCalcMethod/RocaIntCalcMethod.cs')" />

@@ -1,0 +1,107 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+      "A2": "RocaProcessUserTask_GenerateSchedule",
+      "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "8eeadc64-a738-0d21-12ee-fdb57bfe98f2",
+      "B8": "8.2.0.4183",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "b4b8e960-fe3d-0a67-c07f-896040d5cd21",
+          "A2": "RocaCompoundFrequency",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L6": true,
+          "L9": "e63d64de-9d12-45d6-b1ec-4c27d0859996",
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "fe139483-caee-a3c9-9606-06f0b785d138",
+          "A2": "RocaTermsInMonths",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {},
+          "L6": true,
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "55e8b3dd-bc66-5749-5ed4-200d2033bbce",
+          "A2": "RocaFixedPrincipal",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "5cc8060d-6d10-4773-89fc-8c12d6f659a6",
+          "L8": {},
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "ddeb653d-6986-c647-9983-7d510a95618c",
+          "A2": "RocaInstallment",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "5cc8060d-6d10-4773-89fc-8c12d6f659a6",
+          "L8": {},
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "5d2ded50-47cb-4f72-1fc3-0e269bf9e16b",
+          "A2": "RocaPaymentFrequency",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L6": true,
+          "L9": "aeaa62d4-62c6-44b4-a095-33596a9697b6",
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "4576e42c-a158-4fd2-682b-c2eb1b31aafe",
+          "A2": "Roca1stDisbursementDate",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "603d4960-a1a2-45e9-b232-206a54421b01",
+          "L8": {},
+          "L6": true,
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "4d57962b-1700-45b9-b11c-364be29efd12",
+          "A2": "RocaRate",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "5cc8060d-6d10-4773-89fc-8c12d6f659a6",
+          "L8": {},
+          "L6": true,
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "83819ed6-7d3f-22f1-1d98-f0117bff93b7",
+          "A2": "RocaAmortizationTable",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "ebd85d37-0abf-4bbf-bb32-97dc3dffcc8c",
+          "L8": {},
+          "L11": false,
+          "L13": true
+        }
+      ],
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}

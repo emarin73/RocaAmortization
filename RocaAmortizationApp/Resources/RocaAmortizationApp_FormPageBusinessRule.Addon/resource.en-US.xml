@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="AddonConfig.Rules.78f090a7-0a28-3131-bc53-7d2eb143cfca.Caption" Value="Show elements: Grace Period Cycle" />
+			<Item Name="Caption" Value="Amortization App form page (Business rules)" />
+		</Items>
+	</Group>
+</Resources>

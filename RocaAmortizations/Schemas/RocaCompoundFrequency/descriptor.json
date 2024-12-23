@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "e63d64de-9d12-45d6-b1ec-4c27d0859996",
+    "Name": "RocaCompoundFrequency",
+    "ModifiedOnUtc": "\/Date(1734915784000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Compound Frequency",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,81 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "4afec763-4162-49be-9143-350677d2726f",
+      "A2": "RocaAmortizationApp_FormPageBusinessRule",
+      "A5": "52e02457-d24c-4eae-aa35-da42c71755b2",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "e03ae09b-14d1-45c0-af68-f6d8af97cff2",
+      "B8": "8.2.0.4183",
+      "AD1": "a38861e3-9683-424c-b035-e4d943d0616e",
+      "AD2": "ClientUnitSchemaManager",
+      "AD3": "BusinessRule",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "JI0": "Terrasoft.Core.BusinessRules.BusinessRules",
+        "BRS1": [
+          {
+            "JI0": "Terrasoft.Core.BusinessRules.BusinessRule",
+            "UId": "78f090a7-0a28-3131-bc53-7d2eb143cfca",
+            "BR1": [
+              {
+                "JI0": "Terrasoft.Core.BusinessRules.Models.BusinessRuleCase",
+                "UId": "0070cdb1-0acb-246e-b422-3ee3dab48e0d",
+                "BRC1": {
+                  "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleGroupCondition",
+                  "UId": "ff045553-2c39-1637-5eff-2f8a7afc8987",
+                  "BGC1": 1,
+                  "BGC2": [
+                    {
+                      "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleCondition",
+                      "UId": "68c22202-c7b3-4d45-9c44-30be9a003f8b",
+                      "BCO1": {
+                        "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleAttributeExpression",
+                        "UId": "a4352626-d910-b146-75f7-8c75b3156406",
+                        "BRE1": "Lookup",
+                        "BRE2": "AttributeValue",
+                        "BRX1": "PDS_RocaGracePeriodIntMethod_diymhnu",
+                        "BRX2": "null"
+                      },
+                      "BCO2": {
+                        "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleValueExpression",
+                        "UId": "19f7d3fa-e76b-4352-a1d7-6591844ce240",
+                        "BRE1": "Lookup",
+                        "BRE3": "RocaGracePeriodIntMethod",
+                        "BVE1": "633e047d-6ac8-4267-b793-06c05b3abe04"
+                      },
+                      "BCO3": 2
+                    }
+                  ]
+                },
+                "BRC2": [
+                  {
+                    "JI0": "Terrasoft.Core.BusinessRules.Models.Actions.BusinessRuleActionShowElement",
+                    "UId": "18381330-a55b-65ec-0641-9b1ad3b43f00",
+                    "BRA4": "ComboBox_GPCycle"
+                  }
+                ]
+              }
+            ],
+            "BR2": [
+              {
+                "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
+                "UId": "4c80e423-93b3-64fb-fa4e-0f3876e2a10d",
+                "BRT2": 2
+              },
+              {
+                "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
+                "UId": "fa208fc6-1449-80b9-22ba-a48b483fd296",
+                "BRT1": "PDS_RocaGracePeriodIntMethod_diymhnu"
+              }
+            ],
+            "BR3": "BusinessRule_e16a502"
+          }
+        ]
+      }
+    }
+  }
+}

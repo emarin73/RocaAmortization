@@ -1,0 +1,222 @@
+= MetaData.Schema.UId "0a75a51f-0068-431b-8b3d-47cd4caa3fff"
+= MetaData.Schema.A2 "RocaAmortParameters"
+= MetaData.Schema.A5 "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9"
+= MetaData.Schema.B6 "8eeadc64-a738-0d21-12ee-fdb57bfe98f2"
+= MetaData.Schema.B8 "8.2.0.4183"
+= MetaData.Schema.EG1.UId "d265edb1-9932-4cde-9413-27a2d5f66296"
+= MetaData.Schema.EG1.A2 "RocaEntity_95acde8EventsProcess"
+= MetaData.Schema.EG1.A5 "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9"
+= MetaData.Schema.EG1.B1.["fe742d1c-4346-4cc5-894e-217df991856c"].C4 "var lmHelper = new Terrasoft.Configuration.LocalMessageHelper(this.Entity, UserConnection, changeType);\nlmHelper.CreateLocalMessage();"
++ MetaData.Schema.EG1.B8 "8.2.0.4183"
+= MetaData.Schema.EG1.BK8 "7bb7d6a5-e7a3-4837-83bc-7f785d688165"
+= MetaData.Schema.EG1.BK37.A3 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
+= MetaData.Schema.EG1.BK37.A4 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
++ MetaData.Schema.EG1.BK3 {
+  "BL1": "Terrasoft.Core.Process.ProcessSchemaLaneSet",
+  "UId": "079c1a2b-96d1-4935-9764-180b73ed11ac",
+  "A2": "LaneSet1253567487",
+  "A3": "66f58f21-6ed1-4e29-b506-6b9f6426d463",
+  "A4": "66f58f21-6ed1-4e29-b506-6b9f6426d463",
+  "A5": "3644c994-8f85-41ec-8125-47013bac161f",
+  "BL3": "5;5",
+  "BL5": 1,
+  "BL6": "LaneSet",
+  "BL7": "11a47caf-a0d5-41fa-a274-a0b11f77447a",
+  "BL8": "7bb7d6a5-e7a3-4837-83bc-7f785d688165",
+  "BM1": 0,
+  "BM3": "970;454",
+  "BM4": [
+    {
+      "BL1": "Terrasoft.Core.Process.ProcessSchemaLane",
+      "UId": "6a2146bb-1688-4388-9946-29409f61d0fb",
+      "A2": "Lane1i78907890789",
+      "A3": "66f58f21-6ed1-4e29-b506-6b9f6426d463",
+      "A4": "66f58f21-6ed1-4e29-b506-6b9f6426d463",
+      "A5": "3644c994-8f85-41ec-8125-47013bac161f",
+      "IL2": "079c1a2b-96d1-4935-9764-180b73ed11ac",
+      "BL3": "29;0",
+      "BL5": 1,
+      "BL6": "Lane",
+      "BL7": "abcd74b9-5912-414b-82ac-f1aa4dcd554e",
+      "CD1": [],
+      "CD2": [],
+      "CD4": "079c1a2b-96d1-4935-9764-180b73ed11ac",
+      "CD6": "941;454",
+      "CD7": []
+    }
+  ]
+}
+~ MetaData.Schema.EG1.BK3 ["619c2403-5046-4076-b4ec-5421200d9785","079c1a2b-96d1-4935-9764-180b73ed11ac"]
+= MetaData.Schema.EG1.BK4.["08594d74-60b0-45ce-bf17-bac1a8b127f7"].CK2.["496d4a3c-b644-4a65-b0ed-2534d9236da5"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["90027ac8-c9c3-4d21-a4f9-da1cde752cd1"].CK2.["d8b8410f-5c8a-4ddc-8fc2-353483452aed"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["5f3bfbbe-1820-44ca-92f1-6f993169b2dd"].CK2.["d7c806b7-a29b-4ce5-9167-b3319472e772"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["dbf48103-dcf6-4f53-a052-d727a95ea0b4"].CK2.["933bf2fc-d052-40c8-a3e0-bf60049da5d8"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["f0646c74-f291-474f-9a10-143ee868f1c9"].CK2.["b3d5b61f-7afe-48b5-a8cc-40317ea9c428"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.JC1 []
+= MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
++ MetaData.Schema.D29 "null"
++ MetaData.Schema.D30 "null"
++ MetaData.Schema.D31 "null"
++ MetaData.Schema.D4 "1b034cfc-41e6-0d43-2825-da25924eb7bb"
++ MetaData.Schema.D2 {
+  "UId": "8c8d08ba-8575-1d4a-ef34-248cb3a466c1",
+  "A2": "RocaGracePeriodCycle",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "623375a9-cb7b-4e1c-a8ed-2be9b50429b3",
+  "E6": true,
+  "E20": true,
+  "E12": {
+    "FB1": 1,
+    "FB2": "7c788801-18f2-486c-ad74-68c6207db28c"
+  },
+  "E17": "RocaGracePeriodCycleId",
+  "E18": "RocaGracePeriodCycleName"
+}
++ MetaData.Schema.D2 {
+  "UId": "091772c2-962b-08ba-7c5c-6f965f0be4ca",
+  "A2": "RocaGracePeriodIntMethod",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "99d0a12c-ed3c-4fdb-b3c8-8e459b1c6b6a",
+  "E6": true,
+  "E20": true,
+  "E17": "RocaGracePeriodIntMethodId",
+  "E18": "RocaGracePeriodIntMethodName"
+}
++ MetaData.Schema.D2 {
+  "UId": "0cf6d5a8-9747-1f93-7eb5-572709e20c75",
+  "A2": "Roca1stRepaymentDate",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "603d4960-a1a2-45e9-b232-206a54421b01"
+}
++ MetaData.Schema.D2 {
+  "UId": "264c9989-99f8-1e52-2174-357b2cc01e2c",
+  "A2": "Roca1stDisbursementDate",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "603d4960-a1a2-45e9-b232-206a54421b01"
+}
++ MetaData.Schema.D2 {
+  "UId": "aa8eaece-a396-1547-4072-8a933184ac80",
+  "A2": "RocaCompundFrequency",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "e63d64de-9d12-45d6-b1ec-4c27d0859996",
+  "E6": true,
+  "E20": true,
+  "E17": "RocaCompundFrequencyId",
+  "E18": "RocaCompundFrequencyName"
+}
++ MetaData.Schema.D2 {
+  "UId": "0ad1cb0b-3839-a8e7-cc53-ba6b79d9648a",
+  "A2": "RocaPaymentFrequency",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "aeaa62d4-62c6-44b4-a095-33596a9697b6",
+  "E6": true,
+  "E20": true,
+  "E17": "RocaPaymentFrequencyId",
+  "E18": "RocaPaymentFrequencyName"
+}
++ MetaData.Schema.D2 {
+  "UId": "1a4e5604-9b60-4edc-9452-a90a44436dfe",
+  "A2": "RocaLoanType",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "76edb81f-794d-43b7-9d03-b9df5fdc10f2",
+  "E6": true,
+  "E20": true,
+  "E17": "RocaLoanTypeId",
+  "E18": "RocaLoanTypeName"
+}
++ MetaData.Schema.D2 {
+  "UId": "39ba8aa5-51b2-bc76-f713-e496196361d8",
+  "A2": "RocaAmortizationTable",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "44e1aca7-5766-4e08-908b-db3167f36033",
+  "E6": true,
+  "E20": true,
+  "E17": "RocaAmortizationTableId",
+  "E18": "RocaAmortizationTableRocaAmortizationNumber"
+}
++ MetaData.Schema.D2 {
+  "UId": "2665be04-fd3d-8bc6-5486-d67d69157295",
+  "A2": "RocaGracePeriodInMonths",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+}
++ MetaData.Schema.D2 {
+  "UId": "130a7a32-6d07-a9af-9859-df99a4a70182",
+  "A2": "RocaLoanTermInMonths",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+}
++ MetaData.Schema.D2 {
+  "UId": "eb1b2f2f-dc03-5609-9d04-ce9d7178a6d9",
+  "A2": "RocaInterestRate",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+}
++ MetaData.Schema.D2 {
+  "UId": "da06c85b-d35f-b6d3-1f3c-1e9935097af3",
+  "A2": "RocaLoanAmount",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+}
++ MetaData.Schema.D2 {
+  "UId": "1b034cfc-41e6-0d43-2825-da25924eb7bb",
+  "A2": "RocaName",
+  "A3": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "A5": "b6c2fd71-f51a-43a4-b4a4-1aa89a24bee9",
+  "S2": "325a73b8-0f47-44a0-8412-7606f78003ac"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","8c8d08ba-8575-1d4a-ef34-248cb3a466c1","091772c2-962b-08ba-7c5c-6f965f0be4ca","0cf6d5a8-9747-1f93-7eb5-572709e20c75","264c9989-99f8-1e52-2174-357b2cc01e2c","aa8eaece-a396-1547-4072-8a933184ac80","0ad1cb0b-3839-a8e7-cc53-ba6b79d9648a","1a4e5604-9b60-4edc-9452-a90a44436dfe","39ba8aa5-51b2-bc76-f713-e496196361d8","2665be04-fd3d-8bc6-5486-d67d69157295","130a7a32-6d07-a9af-9859-df99a4a70182","eb1b2f2f-dc03-5609-9d04-ce9d7178a6d9","da06c85b-d35f-b6d3-1f3c-1e9935097af3","1b034cfc-41e6-0d43-2825-da25924eb7bb"]
+= MetaData.Schema.D20.A2 "RocaAmortParametersEvents"
+= MetaData.Schema.D36.A3 "0a75a51f-0068-431b-8b3d-47cd4caa3fff"
+= MetaData.Schema.D36.BS1 false
+- MetaData.Schema.EG1.B6
+- MetaData.Schema.EG1.BK29
+- MetaData.Schema.EG1.BK30
+- MetaData.Schema.D1
+- MetaData.Schema.D20.A5
+- MetaData.Schema.D20.FA4
+- MetaData.Schema.D20.FA5
+- MetaData.Schema.D20.FA6
+- MetaData.Schema.D20.FA7
+- MetaData.Schema.D20.FA11
+- MetaData.Schema.D20.FA12
+- MetaData.Schema.D20.FA15
++ MetaData.Schema.B7 false
++ MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E16 false
++ MetaData.Schema.D2.["e80190a5-03b2-4095-90f7-a193a960adee"].E16 false
++ MetaData.Schema.D2.["ebf6bb93-8aa6-4a01-900d-c6ea67affe21"].E16 false
++ MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16 false
++ MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16 false
++ MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16 false

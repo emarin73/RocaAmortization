@@ -1,3 +1,5 @@
 <Project>
-	<ItemGroup Label="Entity Files" Condition="'$(PkgPath)' != ''"></ItemGroup>
+	<ItemGroup Label="Entity Files" Condition="'$(PkgPath)' != ''">
+		<Compile Include="$(PkgPath)/RocaAmortizationApp/Schemas/RocaAmortParameters/RocaAmortParameters.cs" Condition="Exists('$(PkgPath)/RocaAmortizationApp/Schemas/RocaAmortParameters/RocaAmortParameters.cs')" />
+	</ItemGroup>
 </Project>
