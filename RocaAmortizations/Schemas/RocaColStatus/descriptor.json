@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "3c82781c-8858-44d9-9053-96ed0d94af35",
+    "Name": "RocaColStatus",
+    "ModifiedOnUtc": "\/Date(1734910481000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Status of Collaterals",
+    "DependsOn": []
+  }
+}

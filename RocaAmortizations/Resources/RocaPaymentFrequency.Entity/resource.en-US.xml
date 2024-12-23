@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Payment Frequency" />
+			<Item Name="Columns.RocaPymtFreqValue.Caption" Value="Payment Frequency Value" />
+			<Item Name="Description" Value="Payment Frequency" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
+		</Items>
+	</Group>
+</Resources>

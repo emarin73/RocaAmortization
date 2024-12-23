@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "8b10a828-51a0-4c48-8f16-b8ca6f193747",
+    "Name": "RocaAmortizationAppRelatedPage",
+    "ModifiedOnUtc": "\/Date(1734912241000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Amortization App (Page settings)",
+    "DependsOn": []
+  }
+}

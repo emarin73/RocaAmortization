@@ -13,6 +13,12 @@
         "PackageVersion": "7.8.0",
         "Name": "CrtCore",
         "Type": 1
+      },
+      {
+        "UId": "9d99e3f1-7489-9510-8751-316aa22bfdd5",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtFinservApplication",
+        "Type": 1
       }
     ]
   }

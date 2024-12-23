@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="he-IL">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Loan Inquiry" />
+			<Item Name="Columns.RocaName.Caption" Value="שם" />
+		</Items>
+	</Group>
+</Resources>

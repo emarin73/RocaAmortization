@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "444bd80e-4022-491b-b021-1a5f2bbdca6b",
+    "Name": "RocaAmortizationApp_Detail",
+    "ModifiedOnUtc": "\/Date(1734912241000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Amortization App detail",
+    "DependsOn": []
+  }
+}

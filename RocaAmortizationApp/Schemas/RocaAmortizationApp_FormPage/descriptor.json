@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "1f0093b1-ae2b-4b31-8179-849812632a88",
+    "Name": "RocaAmortizationApp_FormPage",
+    "ModifiedOnUtc": "\/Date(1734912241000)\/",
+    "Parent": {
+      "UId": "3b2e117f-8c6b-4ca5-80a2-7ebb497cddf9",
+      "Name": "PageWithTabsFreedomTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Amortization App form page",
+    "DependsOn": []
+  }
+}

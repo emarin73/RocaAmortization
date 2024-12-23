@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "dbfca2ba-a10c-4659-9a72-1101a0695281",
+    "Name": "RocaColLocationOfSecurity",
+    "ModifiedOnUtc": "\/Date(1734910450000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Location Of Security",
+    "DependsOn": []
+  }
+}

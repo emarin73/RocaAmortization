@@ -1,0 +1,19 @@
+<Project>
+	<ItemGroup Condition="'$(PkgPath)' != ''">
+		<Compile Remove="$(PkgPath)/RocaAmortizationApp/Assemblies/**" />
+		<Compile Remove="$(PkgPath)/RocaAmortizationApp/Data/**" />
+		<Compile Remove="$(PkgPath)/RocaAmortizationApp/SqlScripts/**" />
+		<Compile Remove="$(PkgPath)/RocaAmortizationApp/Schemas\**" />
+		<Compile Remove="$(PkgPath)/RocaAmortizationApp/Resources/**" />
+		<EmbeddedResource Remove="$(PkgPath)/RocaAmortizationApp/Assemblies/**" />
+		<EmbeddedResource Remove="$(PkgPath)/RocaAmortizationApp/Data/**" />
+		<EmbeddedResource Remove="$(PkgPath)/RocaAmortizationApp/SqlScripts/**" />
+		<EmbeddedResource Remove="$(PkgPath)/RocaAmortizationApp/Schemas/**" />
+		<EmbeddedResource Remove="$(PkgPath)/RocaAmortizationApp/Resources/**" />
+		<None Remove="$(PkgPath)/RocaAmortizationApp/Assemblies/**" />
+		<None Remove="$(PkgPath)/RocaAmortizationApp/Data/**" />
+		<None Remove="$(PkgPath)/RocaAmortizationApp/SqlScripts/**" />
+		<None Remove="$(PkgPath)/RocaAmortizationApp/Schemas/**" />
+		<None Remove="$(PkgPath)/RocaAmortizationApp/Resources/**" />
+  </ItemGroup>
+</Project>

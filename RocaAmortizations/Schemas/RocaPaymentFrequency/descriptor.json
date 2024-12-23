@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "aeaa62d4-62c6-44b4-a095-33596a9697b6",
+    "Name": "RocaPaymentFrequency",
+    "ModifiedOnUtc": "\/Date(1734912004000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Payment Frequency",
+    "DependsOn": []
+  }
+}

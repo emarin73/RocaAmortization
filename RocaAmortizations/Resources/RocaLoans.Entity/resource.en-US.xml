@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Loans" />
+			<Item Name="Columns.Roca1stDisbursementDate.Caption" Value="1st Disbursement Date" />
+			<Item Name="Columns.RocaAccount.Caption" Value="Customer" />
+			<Item Name="Columns.RocaAnniversaryDate.Caption" Value="Anniversary Date" />
+			<Item Name="Columns.RocaAssosExpSim.Caption" Value="Associated expenses" />
+			<Item Name="Columns.RocaCollateralAllocSource.Caption" Value="Collateral Allocation Source" />
+			<Item Name="Columns.RocaCollateralAmt.Caption" Value="Collateral Amount" />
+			<Item Name="Columns.RocaCollateralsID.Caption" Value="Collaterals ID" />
+			<Item Name="Columns.RocaContact.Caption" Value="Contact" />
+			<Item Name="Columns.RocaCurrency.Caption" Value="Currency" />
+			<Item Name="Columns.RocaDepositPayDate.Caption" Value="Deposit payment date" />
+			<Item Name="Columns.RocaEscrowAmtArrears.Caption" Value="Escrow Amount Arrears" />
+			<Item Name="Columns.RocaEscrowBal.Caption" Value="Escrow Balance" />
+			<Item Name="Columns.RocaGracePeriod.Caption" Value="Grace Period" />
+			<Item Name="Columns.RocaInsPremRenewalDueDt.Caption" Value="Insurance Prem Renewal Due Date" />
+			<Item Name="Columns.RocaInstallmentPeriod.Caption" Value="Installment Period" />
+			<Item Name="Columns.RocaInstallmentSim.Caption" Value="Installment simulator" />
+			<Item Name="Columns.RocaInterestBal.Caption" Value="Interest Balance" />
+			<Item Name="Columns.RocaInterestRate.Caption" Value="Interest %" />
+			<Item Name="Columns.RocaInterestRateSim.Caption" Value="Interest rate" />
+			<Item Name="Columns.RocaIntWriteOff.Caption" Value="Writeoff Interest" />
+			<Item Name="Columns.RocaLastNoticeDate.Caption" Value="Last Notice" />
+			<Item Name="Columns.RocaLastNoticeLoaninfo.Caption" Value="Last Notice" />
+			<Item Name="Columns.RocaLastPaymentAm.Caption" Value="Last payment amount" />
+			<Item Name="Columns.RocaLastPymtDate.Caption" Value="Last Payment Date" />
+			<Item Name="Columns.RocaLatePymtPenaltyDt.Caption" Value="Late Payment Penalty Date" />
+			<Item Name="Columns.RocaLegacyId.Caption" Value="Loan Legacy Id" />
+			<Item Name="Columns.RocaLoanAmDec.Caption" Value="Amount decommited" />
+			<Item Name="Columns.RocaLoanAmOther.Caption" Value="Other" />
+			<Item Name="Columns.RocaLoanAmt.Caption" Value="Loan Amount" />
+			<Item Name="Columns.RocaLoanApp.Caption" Value="Loan Application" />
+			<Item Name="Columns.RocaLoanApprovalDate.Caption" Value="Approval" />
+			<Item Name="Columns.RocaLoanClassification.Caption" Value="Loan Classification" />
+			<Item Name="Columns.RocaLoanContract.Caption" Value="Loan Contract" />
+			<Item Name="Columns.RocaLoanInstallmentTotAmt.Caption" Value="Total Periodic Loan Installment" />
+			<Item Name="Columns.RocaLoanLastInterest.Caption" Value="Last Interest" />
+			<Item Name="Columns.RocaLoanNo.Caption" Value="Loan Number" />
+			<Item Name="Columns.RocaLoanOutstandingPrincipal.Caption" Value="Outstanding Principal" />
+			<Item Name="Columns.RocaLoanPaymentFrecuency.Caption" Value="Payment Frecuency" />
+			<Item Name="Columns.RocaLoanRecoveryStatusDt.Caption" Value="Loan Recovery Status Date" />
+			<Item Name="Columns.RocaLoanStatus.Caption" Value="Loan Status" />
+			<Item Name="Columns.RocaLoanTimesRescheduled.Caption" Value="Times Rescheduled" />
+			<Item Name="Columns.RocaMaturity.Caption" Value="Maturity" />
+			<Item Name="Columns.RocaNonPerformingDt.Caption" Value="Non Performing Date" />
+			<Item Name="Columns.RocaOtherAmtArrears.Caption" Value="Other Amount Arrears" />
+			<Item Name="Columns.RocaOtherBal.Caption" Value="Other Balance" />
+			<Item Name="Columns.RocaOtherWriteOff.Caption" Value="Writeoff Other" />
+			<Item Name="Columns.RocaOutstandingPrincipal.Caption" Value="Outstanding principal Simulator" />
+			<Item Name="Columns.RocaPaidAmount.Caption" Value="Paid Amount" />
+			<Item Name="Columns.RocaPaymentFrecuencySim.Caption" Value="Payment Frecuency Simulator" />
+			<Item Name="Columns.RocaPeriodSim.Caption" Value="Period" />
+			<Item Name="Columns.RocaPeriodType.Caption" Value="Period Type" />
+			<Item Name="Columns.RocaPpalBal.Caption" Value="Principal Balance" />
+			<Item Name="Columns.RocaPpalWriteOff.Caption" Value="Writeoff Principal" />
+			<Item Name="Columns.RocaProduct.Caption" Value="Product" />
+			<Item Name="Columns.RocaRefinanceEvaluacion.Caption" Value="Refinance Evaluation" />
+			<Item Name="Columns.RocaRepaymentCycle.Caption" Value="Repayment Cycle" />
+			<Item Name="Columns.RocaRepaymentEndDate.Caption" Value="Repayment End Date" />
+			<Item Name="Columns.RocaRepaymentStartDate.Caption" Value="Repayment Start Date" />
+			<Item Name="Columns.RocaReservePrice.Caption" Value="Reserve Price" />
+			<Item Name="Columns.RocaTerm.Caption" Value="Term" />
+			<Item Name="Columns.RocaTotalBal.Caption" Value="Total Balance" />
+			<Item Name="Columns.RocaTotalEscrowPayment.Caption" Value="Total Escrow Payment" />
+			<Item Name="Columns.RocaTotalPeriodPayment.Caption" Value="Total Period Payment" />
+			<Item Name="Columns.RocaTotalToPaySim.Caption" Value="Total amount to pay" />
+			<Item Name="Columns.RocaTotWriteOffBal.Caption" Value="Total WriteOff Balance" />
+			<Item Name="Columns.RocaWriteoffDate.Caption" Value="Write-off Date" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
+		</Items>
+	</Group>
+</Resources>

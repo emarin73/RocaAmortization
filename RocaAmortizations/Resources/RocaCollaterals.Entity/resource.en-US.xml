@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Collaterals" />
+			<Item Name="Columns.RocaAppformID.Caption" Value="App form ID" />
+			<Item Name="Columns.RocaAppraiser.Caption" Value="Name of property valuator" />
+			<Item Name="Columns.RocaAvalaibleValue.Caption" Value="Available Value" />
+			<Item Name="Columns.RocaCollateralAllocSource.Caption" Value="Collateral Allocation Source" />
+			<Item Name="Columns.RocaCollateralNumber.Caption" Value="Collateral Number" />
+			<Item Name="Columns.RocaCollateralType.Caption" Value="Collateral Type" />
+			<Item Name="Columns.RocaColValue.Caption" Value="Collateral Value" />
+			<Item Name="Columns.RocaDateClosed.Caption" Value="Date Closed" />
+			<Item Name="Columns.RocaDateEntered.Caption" Value="Date Entered" />
+			<Item Name="Columns.RocaDateOfIssue.Caption" Value="Date of Issue" />
+			<Item Name="Columns.RocaDateSubmmited.Caption" Value="Date submmited to customer" />
+			<Item Name="Columns.RocaDescription.Caption" Value="Description" />
+			<Item Name="Columns.RocaDiscountedValue.Caption" Value="Discounted Value" />
+			<Item Name="Columns.RocaDiscountPercentaje.Caption" Value="Discount Percentage" />
+			<Item Name="Columns.RocaExpiryDate.Caption" Value="Expiry Date" />
+			<Item Name="Columns.RocaExternalEntity.Caption" Value="External entity institution" />
+			<Item Name="Columns.RocaFinApplicationID.Caption" Value="Fin Application ID" />
+			<Item Name="Columns.RocaInAuction.Caption" Value="In Auction" />
+			<Item Name="Columns.RocaLastValuationDate.Caption" Value="Last Valuation Date" />
+			<Item Name="Columns.RocaLastValuationType.Caption" Value="Last Valuation Type" />
+			<Item Name="Columns.RocaLoanApp.Caption" Value="Loan Application" />
+			<Item Name="Columns.RocaLoanNo.Caption" Value="Loan Number" />
+			<Item Name="Columns.RocaLocationSecurity.Caption" Value="Location of Security" />
+			<Item Name="Columns.RocaNextValuationDate.Caption" Value="Next Valuation Date" />
+			<Item Name="Columns.RocaNotes.Caption" Value="Notes" />
+			<Item Name="Columns.RocaOwner.Caption" Value="Owner" />
+			<Item Name="Columns.RocaProjectedValue.Caption" Value="Projected value at expiry date" />
+			<Item Name="Columns.RocaPropertyValuator.Caption" Value="Name of property valuator" />
+			<Item Name="Columns.RocaSolicitor.Caption" Value="Solicitor" />
+			<Item Name="Columns.RocaStatus.Caption" Value="Status" />
+			<Item Name="Columns.RocaTypeClassification.Caption" Value="Collateral Type Classification" />
+			<Item Name="Columns.RocaValuationTermYears.Caption" Value="Valuation Term Years" />
+			<Item Name="Columns.RocaValueSecuringLoans.Caption" Value="Value securing loans" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
+		</Items>
+	</Group>
+</Resources>

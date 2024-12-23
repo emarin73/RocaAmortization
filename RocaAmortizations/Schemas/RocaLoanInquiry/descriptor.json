@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "183804a5-5968-4a40-a5b3-a08cc5899d82",
+    "Name": "RocaLoanInquiry",
+    "ModifiedOnUtc": "\/Date(1734911356000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Loan Inquiry",
+    "DependsOn": []
+  }
+}

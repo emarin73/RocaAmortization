@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Loan Inquiry" />
+			<Item Name="Columns.RocaAdjTermMonths.Caption" Value="Adjusted Term Months" />
+			<Item Name="Columns.RocaAnnualExpense.Caption" Value="Annual Expense" />
+			<Item Name="Columns.RocaAnnualIncome.Caption" Value="Annual Income" />
+			<Item Name="Columns.RocaAnnualNetIncome.Caption" Value="Annual Net Income" />
+			<Item Name="Columns.RocaAvailableAmt.Caption" Value="Amount Available for Loan" />
+			<Item Name="Columns.RocaContact.Caption" Value="Contact" />
+			<Item Name="Columns.RocaCustomerType.Caption" Value="Customer Type" />
+			<Item Name="Columns.RocaEstimatedDisbDate.Caption" Value="Estimated Disbursement Date" />
+			<Item Name="Columns.RocaGraceMonths.Caption" Value="Grace, Months" />
+			<Item Name="Columns.RocaGracePeriodIntMethod.Caption" Value="Grace Period Interest Treatment" />
+			<Item Name="Columns.RocaInquiryStatus.Caption" Value="Loan Inquiry Status" />
+			<Item Name="Columns.RocaInstallment.Caption" Value="Installment" />
+			<Item Name="Columns.RocaIntCalcMethod.Caption" Value="Interest Calculation Method" />
+			<Item Name="Columns.RocaInterestRate.Caption" Value="Interest Rate" />
+			<Item Name="Columns.RocaLoanAmount.Caption" Value="Loan Amount" />
+			<Item Name="Columns.RocaLoanApplication.Caption" Value="Loan Application" />
+			<Item Name="Columns.RocaLoanPurpose.Caption" Value="Loan Purpose" />
+			<Item Name="Columns.RocaLoanType.Caption" Value="Loan Type" />
+			<Item Name="Columns.RocaMonthlyExpense.Caption" Value="Monthly Expense" />
+			<Item Name="Columns.RocaMonthlyIncome.Caption" Value="Monthly Income" />
+			<Item Name="Columns.RocaMonthlyNetIncome.Caption" Value="Monthly Net Income" />
+			<Item Name="Columns.RocaName.Caption" Value="Name" />
+			<Item Name="Columns.RocaNetIncomePerc.Caption" Value="Net Income %" />
+			<Item Name="Columns.RocaNumberOfBorrowers.Caption" Value="Number Of Borrowers" />
+			<Item Name="Columns.RocaPaymentFrequency.Caption" Value="Payment Frequency" />
+			<Item Name="Columns.RocaPrincipalAmtPaymt.Caption" Value="Principal Amount Payment" />
+			<Item Name="Columns.RocaTermMonths.Caption" Value="Term, Months" />
+		</Items>
+	</Group>
+</Resources>

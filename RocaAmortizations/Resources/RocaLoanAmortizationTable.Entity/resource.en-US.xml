@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Amortization Table" />
+			<Item Name="Columns.RocaAmortizationAmount.Caption" Value="Amortization Amount" />
+			<Item Name="Columns.RocaAmortizationApplicationNumber.Caption" Value="Application N°" />
+			<Item Name="Columns.RocaAmortizationBeginningBalance.Caption" Value="Beginning Balance" />
+			<Item Name="Columns.RocaAmortizationDate.Caption" Value="Amortization Date" />
+			<Item Name="Columns.RocaAmortizationEndingBalance.Caption" Value="Ending Balance" />
+			<Item Name="Columns.RocaAmortizationInterest.Caption" Value="Interest" />
+			<Item Name="Columns.RocaAmortizationLoan.Caption" Value="Loan" />
+			<Item Name="Columns.RocaAmortizationNumber.Caption" Value="Amortization N°" />
+			<Item Name="Columns.RocaAmortizationPrincipal.Caption" Value="Principal" />
+			<Item Name="Columns.RocaCurrentDue.Caption" Value="Current Due" />
+			<Item Name="Columns.RocaInArrear.Caption" Value="In Arrear" />
+			<Item Name="Columns.RocaLegacyLoan.Caption" Value="Legacy Loan" />
+			<Item Name="Columns.RocaLoanInquiry.Caption" Value="Loan Inquiry" />
+			<Item Name="Columns.RocaPaid.Caption" Value="Paid in Full" />
+			<Item Name="Columns.RocaPartiallyPaid.Caption" Value="Partially Paid" />
+			<Item Name="Columns.RocaPeriodNumber.Caption" Value="Period N°" />
+			<Item Name="Columns.RocaPeriodNumber.Description" Value="Period N°" />
+			<Item Name="Columns.RocaRefinance.Caption" Value="Refinance" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
+		</Items>
+	</Group>
+</Resources>

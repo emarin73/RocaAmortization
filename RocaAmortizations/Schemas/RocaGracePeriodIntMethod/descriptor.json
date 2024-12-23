@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "99d0a12c-ed3c-4fdb-b3c8-8e459b1c6b6a",
+    "Name": "RocaGracePeriodIntMethod",
+    "ModifiedOnUtc": "\/Date(1734910872000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Grace Period Interest Treatment",
+    "DependsOn": []
+  }
+}

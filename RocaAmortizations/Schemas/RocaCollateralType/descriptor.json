@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "33e5ad26-58da-4dc8-bce7-dec99a43b0f3",
+    "Name": "RocaCollateralType",
+    "ModifiedOnUtc": "\/Date(1734910600000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Collateral Type",
+    "DependsOn": []
+  }
+}

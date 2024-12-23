@@ -1,0 +1,28 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "8b10a828-51a0-4c48-8f16-b8ca6f193747",
+      "A2": "RocaAmortizationAppRelatedPage",
+      "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2",
+      "B8": "0.0.0.0",
+      "AD1": "44e1aca7-5766-4e08-908b-db3167f36033",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "Pages": [
+          {
+            "UId": "a60feadc-9c17-468d-a369-89747b95288f",
+            "PageSchemaUId": "1f0093b1-ae2b-4b31-8179-849812632a88",
+            "IsDefault": true
+          }
+        ]
+      }
+    }
+  }
+}
