@@ -131,14 +131,14 @@ namespace Terrasoft.Core.Process.Configuration
                     paymentAmount = (decimal)(principal * (ratePerPeriod * temp) / (temp - 1));
                     installment = paymentAmount;
                     fixedPrincipal = 0m;
-                }
+           }     
              
             else if (loanTypeCode == "2. Fixed Principal")
             {
                 // For Fixed Principal loans, we need the principal payment amount
                     fixedPrincipal = loanAmount / numberOfPayments;
                     installment = 0m;
-
+                
                 // Log or debug the calculated principal amount
                 var message = $"Fixed Principal Loan Calculation:\nLoan Amount: {loanAmount}\nPayments: {numberOfPayments}\nCalculated Principal: {principalPayment}";
 

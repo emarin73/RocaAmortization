@@ -65,6 +65,34 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 			},
 			{
 				"operation": "insert",
+				"name": "Button_igge2v2",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_igge2v2_caption)#",
+					"color": "default",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "only-icon",
+					"visible": true,
+					"clicked": {
+						"request": "crt.LoadDataRequest",
+						"params": {
+							"config": {
+								"loadType": "reload",
+								"useLastLoadParameters": true
+							},
+							"dataSourceName": "DataGrid_vs1cy49DS"
+						}
+					},
+					"clickMode": "default",
+					"icon": "reload-icon"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
 				"name": "RocaName",
 				"values": {
 					"layoutConfig": {
