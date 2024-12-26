@@ -94,10 +94,45 @@
           "A2": "RocaAmortizationTable",
           "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
           "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
-          "L1": "ebd85d37-0abf-4bbf-bb32-97dc3dffcc8c",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
           "L8": {},
+          "L9": "44e1aca7-5766-4e08-908b-db3167f36033",
           "L11": false,
           "L13": true
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "ed5f24d1-2e96-fa6e-af64-7ddce53f50f1",
+          "A2": "RocaLoanAmount",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "5cc8060d-6d10-4773-89fc-8c12d6f659a6",
+          "L8": {},
+          "L6": true,
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "1fe47ad0-540b-e851-6835-9c2b95b757c1",
+          "A2": "RocaLoanType",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L6": true,
+          "L9": "76edb81f-794d-43b7-9d03-b9df5fdc10f2",
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "418db074-51dc-5e4e-2bc1-d2b2dd347d74",
+          "A2": "RocaParameterId",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "23018567-a13c-4320-8687-fd6f9e3699bd",
+          "L8": {},
+          "L6": true,
+          "L11": false
         }
       ],
       "FK12": "#839DC3",

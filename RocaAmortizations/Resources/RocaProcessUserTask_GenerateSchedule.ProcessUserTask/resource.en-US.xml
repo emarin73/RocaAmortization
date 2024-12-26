@@ -10,6 +10,9 @@
 			<Item Name="Parameters.RocaCompoundFrequency.Caption" Value="Compound Frequency" />
 			<Item Name="Parameters.RocaFixedPrincipal.Caption" Value="Fixed Principal" />
 			<Item Name="Parameters.RocaInstallment.Caption" Value="Installment" />
+			<Item Name="Parameters.RocaLoanAmount.Caption" Value="Loan Amount" />
+			<Item Name="Parameters.RocaLoanType.Caption" Value="Loan Type" />
+			<Item Name="Parameters.RocaParameterId.Caption" Value="Parameter Id" />
 			<Item Name="Parameters.RocaPaymentFrequency.Caption" Value="Payment Frequency" />
 			<Item Name="Parameters.RocaRate.Caption" Value="Annual Interest Rate" />
 			<Item Name="Parameters.RocaTermsInMonths.Caption" Value="Terms in Months" />

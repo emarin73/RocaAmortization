@@ -12,6 +12,8 @@
 			<Item Name="Columns.RocaAmortizationLoan.Caption" Value="Loan" />
 			<Item Name="Columns.RocaAmortizationNumber.Caption" Value="Amortization N°" />
 			<Item Name="Columns.RocaAmortizationPrincipal.Caption" Value="Principal" />
+			<Item Name="Columns.RocaAmortParameter.Caption" Value="Amortization Parameters (Father table)" />
+			<Item Name="Columns.RocaAmortParameter.Description" Value="Amortization Parameters  (Father table)" />
 			<Item Name="Columns.RocaCurrentDue.Caption" Value="Current Due" />
 			<Item Name="Columns.RocaInArrear.Caption" Value="In Arrear" />
 			<Item Name="Columns.RocaLegacyLoan.Caption" Value="Legacy Loan" />

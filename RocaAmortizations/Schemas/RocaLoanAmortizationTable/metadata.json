@@ -92,7 +92,7 @@
   "E6": true,
   "E20": true,
   "E17": "RocaAmortizationLoanId",
-  "E18": "RocaAmortizationLoanDfcLoanNo"
+  "E18": "RocaAmortizationLoanRocaLoanNo"
 }
 + MetaData.Schema.D2 {
   "UId": "8e655c67-593b-d48c-2c9a-3ec7f48c4e07",
@@ -187,7 +187,7 @@
   "E6": true,
   "E20": true,
   "E17": "RocaLegacyLoanId",
-  "E18": "RocaLegacyLoanDfcLoanNo"
+  "E18": "RocaLegacyLoanRocaLoanNo"
 }
 + MetaData.Schema.D2 {
   "UId": "a3f34076-ca2a-d94c-19e6-d1d7d57b873e",
@@ -216,9 +216,22 @@
   "E6": true,
   "E20": true,
   "E17": "RocaLoanInquiryId",
-  "E18": "RocaLoanInquiryDfcName"
+  "E18": "RocaLoanInquiryRocaName"
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","61e078f3-890a-91cd-88ff-9e2c37e6735c","155a34fb-21ed-78d2-af78-89a56a3ed861","e593ac4b-8c61-f821-50d0-3bc9c9df7fb5","8e655c67-593b-d48c-2c9a-3ec7f48c4e07","345c504a-8aec-2525-ab53-9c6d34ea315c","f29c0770-4205-854e-b9aa-eae73c1a146f","c37b7f26-291f-5237-04b1-b21fed5ca051","2bb5fc31-2ade-c4b1-b40b-d70cadb137eb","172c817c-eb5c-5fca-fb52-579209d8589a","63f9b873-1099-2455-f5fc-d9508b96ef1b","44d089c3-46ff-df41-dc36-46d004e78f11","d6b6d940-ab85-779a-2984-7b1ab0411c12","15c5d763-a27b-96c6-06bc-feccfe9ebb81","38a32070-bf0e-594d-d896-2c8791a84f80","a3f34076-ca2a-d94c-19e6-d1d7d57b873e","31a9547a-a8ac-2092-91f5-ef439a2effed","2ea2a3cd-50a9-2bcd-4b7f-2f95591e9341"]
++ MetaData.Schema.D2 {
+  "UId": "64600d69-bb67-8449-a91b-142f96be699d",
+  "A2": "RocaAmortParameter",
+  "A3": "44e1aca7-5766-4e08-908b-db3167f36033",
+  "A4": "44e1aca7-5766-4e08-908b-db3167f36033",
+  "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+  "E6": true,
+  "E20": true,
+  "E17": "RocaAmortParameterId",
+  "E18": "RocaAmortParameterRocaName"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","61e078f3-890a-91cd-88ff-9e2c37e6735c","155a34fb-21ed-78d2-af78-89a56a3ed861","e593ac4b-8c61-f821-50d0-3bc9c9df7fb5","8e655c67-593b-d48c-2c9a-3ec7f48c4e07","345c504a-8aec-2525-ab53-9c6d34ea315c","f29c0770-4205-854e-b9aa-eae73c1a146f","c37b7f26-291f-5237-04b1-b21fed5ca051","2bb5fc31-2ade-c4b1-b40b-d70cadb137eb","172c817c-eb5c-5fca-fb52-579209d8589a","63f9b873-1099-2455-f5fc-d9508b96ef1b","44d089c3-46ff-df41-dc36-46d004e78f11","d6b6d940-ab85-779a-2984-7b1ab0411c12","15c5d763-a27b-96c6-06bc-feccfe9ebb81","38a32070-bf0e-594d-d896-2c8791a84f80","a3f34076-ca2a-d94c-19e6-d1d7d57b873e","31a9547a-a8ac-2092-91f5-ef439a2effed","2ea2a3cd-50a9-2bcd-4b7f-2f95591e9341","64600d69-bb67-8449-a91b-142f96be699d"]
 = MetaData.Schema.D20.A2 "RocaLoanAmortizationTableEvents"
 = MetaData.Schema.D36.A3 "44e1aca7-5766-4e08-908b-db3167f36033"
 = MetaData.Schema.D36.BS1 false

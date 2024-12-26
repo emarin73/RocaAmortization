@@ -54,7 +54,7 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 							"processName": "RocaProcess_GenerateSchedule",
 							"processRunType": "ForTheSelectedPage",
 							"showNotification": true,
-							"recordIdProcessParameterName": "AmortizationId"
+							"recordIdProcessParameterName": "ParameterId"
 						}
 					},
 					"clickMode": "default"
@@ -520,6 +520,12 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 					"primaryColumnName": "DataGrid_vs1cy49DS_Id",
 					"columns": [
 						{
+							"id": "e28809af-ea9d-e723-ed9e-968edca4baf7",
+							"code": "DataGrid_vs1cy49DS_RocaAmortParameter",
+							"caption": "#ResourceString(DataGrid_vs1cy49DS_RocaAmortParameter)#",
+							"dataValueType": 10
+						},
+						{
 							"id": "baa2561e-58c7-ce82-faeb-622794b27353",
 							"code": "DataGrid_vs1cy49DS_RocaAmortizationNumber",
 							"caption": "#ResourceString(DataGrid_vs1cy49DS_RocaAmortizationNumber)#",
@@ -722,14 +728,19 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 							"sortingConfig": {
 								"default": [
 									{
-										"direction": "asc",
-										"columnName": "RocaPeriodNumber"
+										"direction": "desc",
+										"columnName": "RocaAmortParameter"
 									}
 								]
 							}
 						},
 						"viewModelConfig": {
 							"attributes": {
+								"DataGrid_vs1cy49DS_RocaAmortParameter": {
+									"modelConfig": {
+										"path": "DataGrid_vs1cy49DS.RocaAmortParameter"
+									}
+								},
 								"DataGrid_vs1cy49DS_RocaAmortizationNumber": {
 									"modelConfig": {
 										"path": "DataGrid_vs1cy49DS.RocaAmortizationNumber"
@@ -796,8 +807,8 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 					"dependencies": {
 						"DataGrid_vs1cy49DS": [
 							{
-								"attributePath": "Id",
-								"relationPath": "PDS.RocaAmortizationTable"
+								"attributePath": "RocaAmortParameter",
+								"relationPath": "PDS.Id"
 							}
 						]
 					}
@@ -822,6 +833,9 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 						"config": {
 							"entitySchemaName": "RocaLoanAmortizationTable",
 							"attributes": {
+								"RocaAmortParameter": {
+									"path": "RocaAmortParameter"
+								},
 								"RocaAmortizationNumber": {
 									"path": "RocaAmortizationNumber"
 								},

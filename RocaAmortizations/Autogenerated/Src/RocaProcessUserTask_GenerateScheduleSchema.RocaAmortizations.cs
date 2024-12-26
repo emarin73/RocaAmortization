@@ -22,6 +22,9 @@
 	[DesignModeProperty(Name = "Roca1stDisbursementDate", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.Roca1stDisbursementDate.Caption", DescriptionResourceItem = "Parameters.Roca1stDisbursementDate.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "RocaRate", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaRate.Caption", DescriptionResourceItem = "Parameters.RocaRate.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "RocaAmortizationTable", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaAmortizationTable.Caption", DescriptionResourceItem = "Parameters.RocaAmortizationTable.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RocaLoanAmount", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaLoanAmount.Caption", DescriptionResourceItem = "Parameters.RocaLoanAmount.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RocaLoanType", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaLoanType.Caption", DescriptionResourceItem = "Parameters.RocaLoanType.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RocaParameterId", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaParameterId.Caption", DescriptionResourceItem = "Parameters.RocaParameterId.Caption", UseSolutionStorage = true)]
 	/// <exclude/>
 	public partial class RocaProcessUserTask_GenerateSchedule : ProcessUserTask
 	{
@@ -72,14 +75,24 @@
 			set;
 		}
 
-		private Entity _rocaAmortizationTable;
-		public virtual Entity RocaAmortizationTable {
-			get {
-				return _rocaAmortizationTable ?? (_rocaAmortizationTable = new Entity(UserConnection));
-			}
-			set {
-				_rocaAmortizationTable = value;
-			}
+		public virtual Guid RocaAmortizationTable {
+			get;
+			set;
+		}
+
+		public virtual Decimal RocaLoanAmount {
+			get;
+			set;
+		}
+
+		public virtual Guid RocaLoanType {
+			get;
+			set;
+		}
+
+		public virtual Guid RocaParameterId {
+			get;
+			set;
 		}
 
 		#endregion
@@ -129,13 +142,23 @@
 				}
 			}
 			if (UseFlowEngineMode) {
-				if (RocaAmortizationTable != null && RocaAmortizationTable.Schema != null) {
-					if (UseFlowEngineMode) {
-						RocaAmortizationTable.Write(writer, "RocaAmortizationTable");
-					} else {
-						string serializedEntity = Entity.SerializeToJson(RocaAmortizationTable);
-						writer.WriteValue("RocaAmortizationTable", serializedEntity, null);
-					}
+				if (!HasMapping("RocaAmortizationTable")) {
+					writer.WriteValue("RocaAmortizationTable", RocaAmortizationTable, Guid.Empty);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RocaLoanAmount")) {
+					writer.WriteValue("RocaLoanAmount", RocaLoanAmount, 0m);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RocaLoanType")) {
+					writer.WriteValue("RocaLoanType", RocaLoanType, Guid.Empty);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RocaParameterId")) {
+					writer.WriteValue("RocaParameterId", RocaParameterId, Guid.Empty);
 				}
 			}
 			writer.WriteFinishObject();
@@ -194,11 +217,25 @@
 					if (!UseFlowEngineMode) {
 						break;
 					}
-					if (UseFlowEngineMode) {
-						RocaAmortizationTable = reader.GetValue<Entity>();
-					} else {
-						RocaAmortizationTable = Entity.DeserializeFromJson(UserConnection, reader.GetValue<System.String>());
+					RocaAmortizationTable = reader.GetGuidValue();
+				break;
+				case "RocaLoanAmount":
+					if (!UseFlowEngineMode) {
+						break;
 					}
+					RocaLoanAmount = reader.GetValue<System.Decimal>();
+				break;
+				case "RocaLoanType":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					RocaLoanType = reader.GetGuidValue();
+				break;
+				case "RocaParameterId":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					RocaParameterId = reader.GetGuidValue();
 				break;
 			}
 		}

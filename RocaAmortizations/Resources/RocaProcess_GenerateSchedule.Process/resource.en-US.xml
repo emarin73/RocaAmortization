@@ -24,15 +24,34 @@
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultType.Caption" Value="Type of result" />
 			<Item Name="BaseElements.StartEvent1.Caption" Value="Manual Start" />
-			<Item Name="BaseElements.UserTask1.Caption" Value="ProcessUserTask_GenerateSchedule 1" />
+			<Item Name="BaseElements.UserTask2.Caption" Value="Generate Schedule 1" />
+			<Item Name="BaseElements.UserTask2.Parameters.Roca1stDisbursementDate.Caption" Value="1st Disbursement Date" />
+			<Item Name="BaseElements.UserTask2.Parameters.Roca1stDisbursementDate.DisplayValue" Value="[#Read.First item of resulting collection.1st Disbursement Date#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaAmortizationTable.Caption" Value="Amortization Table" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaCompoundFrequency.Caption" Value="Compound Frequency" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaCompoundFrequency.DisplayValue" Value="[#Read.First item of resulting collection.Compound Frequency#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaFixedPrincipal.Caption" Value="Fixed Principal" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaInstallment.Caption" Value="Installment" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanAmount.Caption" Value="Loan Amount" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanAmount.DisplayValue" Value="[#Read.First item of resulting collection.Loan Amount#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanType.Caption" Value="Loan Type" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanType.DisplayValue" Value="[#Read.First item of resulting collection.Loan Type#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaParameterId.Caption" Value="Parameter Id" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaParameterId.DisplayValue" Value="[#Parameter Id#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaPaymentFrequency.Caption" Value="Payment Frequency" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaPaymentFrequency.DisplayValue" Value="[#Read.First item of resulting collection.Payment Frequency#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaRate.Caption" Value="Annual Interest Rate" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaRate.DisplayValue" Value="[#Read.First item of resulting collection.Rate#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaTermsInMonths.Caption" Value="Terms in Months" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaTermsInMonths.DisplayValue" Value="[#Read.First item of resulting collection.Loan Term in Months#]" />
 			<Item Name="Caption" Value="Generate Schedule" />
 			<Item Name="Description" Value="Generate Schedule" />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
 			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />
 			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
-			<Item Name="Parameters.AmortizationId.Caption" Value="Parameter Id" />
-			<Item Name="Parameters.AmortizationId.Sys_Description" Value="Amortization Id" />
+			<Item Name="Parameters.ParameterId.Caption" Value="Parameter Id" />
+			<Item Name="Parameters.ParameterId.Sys_Description" Value="Amortization Parameter Id" />
 		</Items>
 	</Group>
 </Resources>

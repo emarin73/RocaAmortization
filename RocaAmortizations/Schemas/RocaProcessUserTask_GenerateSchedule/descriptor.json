@@ -2,9 +2,8 @@
   "Descriptor": {
     "UId": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
     "Name": "RocaProcessUserTask_GenerateSchedule",
-    "ModifiedOnUtc": "\/Date(1734925560000)\/",
+    "ModifiedOnUtc": "\/Date(1735233064000)\/",
     "ManagerName": "ProcessUserTaskSchemaManager",
-    "Caption": "Generate Schedule",
-    "DependsOn": []
+    "Caption": "Generate Schedule"
   }
 }
