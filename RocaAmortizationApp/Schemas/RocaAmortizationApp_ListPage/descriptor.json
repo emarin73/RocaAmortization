@@ -2,13 +2,12 @@
   "Descriptor": {
     "UId": "dccb1636-5f25-4cf6-81e0-5219283af840",
     "Name": "RocaAmortizationApp_ListPage",
-    "ModifiedOnUtc": "\/Date(1734922690000)\/",
+    "ModifiedOnUtc": "\/Date(1735330686000)\/",
     "Parent": {
       "UId": "3334b6c0-c8ab-4b59-a367-0c9182102552",
       "Name": "ListPageV2Template"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "Amortization App list page",
-    "DependsOn": []
+    "Caption": "Amortization App list page"
   }
 }

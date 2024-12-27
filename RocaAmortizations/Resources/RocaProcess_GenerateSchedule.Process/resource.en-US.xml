@@ -2,48 +2,91 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="BaseElements.ReadDataUserTask1.Caption" Value="Read" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.DataSourceFilters.Caption" Value="Data source of filters" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.EntityColumnMetaPathes.Caption" Value="Columns to read" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.FunctionType.Caption" Value="Aggregate function type" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.IgnoreDisplayValues.Caption" Value="Do not read displayed values of lookup columns" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.NumberOfRecords.Caption" Value="Number of records to read" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.OrderInfo.Caption" Value="Columns order" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ReadSomeTopRecords.Caption" Value="Read first" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultCompositeObjectList.Caption" Value="Collection of records" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultCount.Caption" Value="Number of records" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultDateTimeFunction.Caption" Value="Function result (Date/Time)" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultEntity.Caption" Value="First item of resulting collection" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultEntityCollection.Caption" Value="Resulting collection" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultFloatFunction.Caption" Value="Function result (Decimal)" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultIntegerFunction.Caption" Value="Function result (Integer)" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
-			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultType.Caption" Value="Type of result" />
+			<Item Name="BaseElements.ReadParameters.Caption" Value="Read Parameters" />
+			<Item Name="BaseElements.ReadParameters.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
+			<Item Name="BaseElements.ReadParameters.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
+			<Item Name="BaseElements.ReadParameters.Parameters.CanReadUncommitedData.DisplayValue" Value="true" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
+			<Item Name="BaseElements.ReadParameters.Parameters.DataSourceFilters.Caption" Value="Data source of filters" />
+			<Item Name="BaseElements.ReadParameters.Parameters.EntityColumnMetaPathes.Caption" Value="Columns to read" />
+			<Item Name="BaseElements.ReadParameters.Parameters.FunctionType.Caption" Value="Aggregate function type" />
+			<Item Name="BaseElements.ReadParameters.Parameters.FunctionType.DisplayValue" Value="0" />
+			<Item Name="BaseElements.ReadParameters.Parameters.IgnoreDisplayValues.Caption" Value="Do not read displayed values of lookup columns" />
+			<Item Name="BaseElements.ReadParameters.Parameters.NumberOfRecords.Caption" Value="Number of records to read" />
+			<Item Name="BaseElements.ReadParameters.Parameters.NumberOfRecords.DisplayValue" Value="50" />
+			<Item Name="BaseElements.ReadParameters.Parameters.OrderInfo.Caption" Value="Columns order" />
+			<Item Name="BaseElements.ReadParameters.Parameters.OrderInfo.DisplayValue" Value="RocaName:1:1" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ReadSomeTopRecords.Caption" Value="Read first" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ReadSomeTopRecords.DisplayValue" Value="true" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ResultCompositeObjectList.Caption" Value="Collection of records" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ResultCount.Caption" Value="Number of records" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ResultDateTimeFunction.Caption" Value="Function result (Date/Time)" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ResultEntity.Caption" Value="First item of resulting collection" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ResultEntityCollection.Caption" Value="Resulting collection" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ResultFloatFunction.Caption" Value="Function result (Decimal)" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ResultIntegerFunction.Caption" Value="Function result (Integer)" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ResultType.Caption" Value="Type of result" />
+			<Item Name="BaseElements.ReadParameters.Parameters.ResultType.DisplayValue" Value="0" />
+			<Item Name="BaseElements.RefreshDataAmortization.Caption" Value="Refresh Amortization Table" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.CanReadUncommitedData.DisplayValue" Value="true" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.DataSourceFilters.Caption" Value="Data source of filters" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.EntityColumnMetaPathes.Caption" Value="Columns to read" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.FunctionType.Caption" Value="Aggregate function type" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.FunctionType.DisplayValue" Value="0" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.IgnoreDisplayValues.Caption" Value="Do not read displayed values of lookup columns" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.NumberOfRecords.Caption" Value="Number of records to read" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.NumberOfRecords.DisplayValue" Value="50" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.OrderInfo.Caption" Value="Columns order" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.OrderInfo.DisplayValue" Value="RocaAmortizationNumber:1:1" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ReadSomeTopRecords.Caption" Value="Read first" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ReadSomeTopRecords.DisplayValue" Value="true" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ResultCompositeObjectList.Caption" Value="Collection of records" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ResultCount.Caption" Value="Number of records" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ResultDateTimeFunction.Caption" Value="Function result (Date/Time)" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ResultEntity.Caption" Value="First item of resulting collection" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ResultEntityCollection.Caption" Value="Resulting collection" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ResultFloatFunction.Caption" Value="Function result (Decimal)" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ResultIntegerFunction.Caption" Value="Function result (Integer)" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ResultType.Caption" Value="Type of result" />
+			<Item Name="BaseElements.RefreshDataAmortization.Parameters.ResultType.DisplayValue" Value="0" />
 			<Item Name="BaseElements.StartEvent1.Caption" Value="Manual Start" />
-			<Item Name="BaseElements.UserTask2.Caption" Value="Generate Schedule 1" />
+			<Item Name="BaseElements.UserTask2.Caption" Value="Generate Schedule" />
 			<Item Name="BaseElements.UserTask2.Parameters.Roca1stDisbursementDate.Caption" Value="1st Disbursement Date" />
-			<Item Name="BaseElements.UserTask2.Parameters.Roca1stDisbursementDate.DisplayValue" Value="[#Read.First item of resulting collection.1st Disbursement Date#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.Roca1stDisbursementDate.DisplayValue" Value="[#Read Parameters.First item of resulting collection.1st Disbursement Date#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaAmortizationParentObject.Caption" Value="Amortization Parent Object" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaAmortizationParentObject.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Amortization Parameter Object#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaAmortizationTable.Caption" Value="Amortization Table" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaCompoundFrequency.Caption" Value="Compound Frequency" />
-			<Item Name="BaseElements.UserTask2.Parameters.RocaCompoundFrequency.DisplayValue" Value="[#Read.First item of resulting collection.Compound Frequency#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaCompoundFrequency.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Compound Frequency#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaFixedPrincipal.Caption" Value="Fixed Principal" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaGracePeriodCycle.Caption" Value="Grace Period Cycle" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaGracePeriodCycle.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Grace Period Cycle#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaGracePeriodInMonths.Caption" Value="Grace Period in Months" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaGracePeriodInMonths.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Grace Period In Months#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaGracePeriodIntMethod.Caption" Value="Grace Period Interest Method" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaGracePeriodIntMethod.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Grace Period Interest Method#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaInstallment.Caption" Value="Installment" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanAmount.Caption" Value="Loan Amount" />
-			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanAmount.DisplayValue" Value="[#Read.First item of resulting collection.Loan Amount#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanAmount.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Loan Amount#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanType.Caption" Value="Loan Type" />
-			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanType.DisplayValue" Value="[#Read.First item of resulting collection.Loan Type#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanType.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Loan Type#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaParameterId.Caption" Value="Parameter Id" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaParameterId.DisplayValue" Value="[#Parameter Id#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaParentObject.Caption" Value="Parameter Parent Object" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaParentObject.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Amortization Parameter Object#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaPaymentFrequency.Caption" Value="Payment Frequency" />
-			<Item Name="BaseElements.UserTask2.Parameters.RocaPaymentFrequency.DisplayValue" Value="[#Read.First item of resulting collection.Payment Frequency#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaPaymentFrequency.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Payment Frequency#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaRate.Caption" Value="Annual Interest Rate" />
-			<Item Name="BaseElements.UserTask2.Parameters.RocaRate.DisplayValue" Value="[#Read.First item of resulting collection.Rate#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaRate.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Rate#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaTermsInMonths.Caption" Value="Terms in Months" />
-			<Item Name="BaseElements.UserTask2.Parameters.RocaTermsInMonths.DisplayValue" Value="[#Read.First item of resulting collection.Loan Term in Months#]" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaTermsInMonths.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Loan Term in Months#]" />
 			<Item Name="Caption" Value="Generate Schedule" />
 			<Item Name="Description" Value="Generate Schedule" />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />

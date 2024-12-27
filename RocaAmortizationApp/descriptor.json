@@ -14,6 +14,11 @@
         "Type": 1
       },
       {
+        "UId": "0f1116a2-88a9-4a2c-b333-bb375de9976f",
+        "PackageVersion": "7.8.0",
+        "Name": "BaseFinance"
+      },
+      {
         "UId": "8eeadc64-a738-0d21-12ee-fdb57bfe98f2",
         "Name": "RocaAmortizations",
         "Type": 1

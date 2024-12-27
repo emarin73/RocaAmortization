@@ -6,12 +6,20 @@
 			<Item Name="LocalizableStrings.addRecord_28j3zov_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_5jmhtdy_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_8aaulyv_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_hd0c31j_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_kogwa7x_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_qsgrdf4_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.Button_c1nvssu_caption.Value" Value="Calculate" />
+			<Item Name="LocalizableStrings.Button_Calculate_caption.Value" Value="Calculate" />
 			<Item Name="LocalizableStrings.Button_igge2v2_caption.Value" Value="Button" />
+			<Item Name="LocalizableStrings.Button_Refresh_caption.Value" Value="Button" />
+			<Item Name="LocalizableStrings.GeneralInfoTab_caption.Value" Value="Test Parameters" />
 			<Item Name="LocalizableStrings.Label_72l2nd5_caption.Value" Value="Grace Period Parameters" />
 			<Item Name="LocalizableStrings.Label_LoanParam_caption.Value" Value="Loan Parameters" />
+			<Item Name="LocalizableStrings.TabContainer_4jpi6hn_caption.Value" Value="Amortization" />
+			<Item Name="LocalizableStrings.TabContainer_Amortization_caption.Value" Value="Application" />
+			<Item Name="LocalizableStrings.TabContainer_c0k8f09_caption.Value" Value="Inquiry" />
+			<Item Name="LocalizableStrings.TabContainer_r28zy26_caption.Value" Value="Loan" />
 		</Items>
 	</Group>
 </Resources>

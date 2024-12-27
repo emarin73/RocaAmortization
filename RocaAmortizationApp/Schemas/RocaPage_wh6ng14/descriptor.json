@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "4f9a43f8-37bd-47d2-b4d1-1018faf2aafe",
+    "Name": "RocaPage_wh6ng14",
+    "ModifiedOnUtc": "\/Date(1735330416000)\/",
+    "Parent": {
+      "UId": "ecdcc8ff-272c-4957-9381-7d74ce17e140",
+      "Name": "BaseMiniPageTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Amortization Parameters modal page"
+  }
+}

@@ -25,6 +25,11 @@
 	[DesignModeProperty(Name = "RocaLoanAmount", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaLoanAmount.Caption", DescriptionResourceItem = "Parameters.RocaLoanAmount.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "RocaLoanType", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaLoanType.Caption", DescriptionResourceItem = "Parameters.RocaLoanType.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "RocaParameterId", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaParameterId.Caption", DescriptionResourceItem = "Parameters.RocaParameterId.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RocaGracePeriodInMonths", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaGracePeriodInMonths.Caption", DescriptionResourceItem = "Parameters.RocaGracePeriodInMonths.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RocaGracePeriodIntMethod", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaGracePeriodIntMethod.Caption", DescriptionResourceItem = "Parameters.RocaGracePeriodIntMethod.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RocaGracePeriodCycle", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaGracePeriodCycle.Caption", DescriptionResourceItem = "Parameters.RocaGracePeriodCycle.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RocaAmortizationParentObject", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaAmortizationParentObject.Caption", DescriptionResourceItem = "Parameters.RocaAmortizationParentObject.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RocaParentObject", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaParentObject.Caption", DescriptionResourceItem = "Parameters.RocaParentObject.Caption", UseSolutionStorage = true)]
 	/// <exclude/>
 	public partial class RocaProcessUserTask_GenerateSchedule : ProcessUserTask
 	{
@@ -95,6 +100,38 @@
 			set;
 		}
 
+		public virtual int RocaGracePeriodInMonths {
+			get;
+			set;
+		}
+
+		public virtual Guid RocaGracePeriodIntMethod {
+			get;
+			set;
+		}
+
+		public virtual Guid RocaGracePeriodCycle {
+			get;
+			set;
+		}
+
+		public virtual Guid RocaAmortizationParentObject {
+			get;
+			set;
+		}
+
+		public virtual Guid RocaParentObject {
+			get;
+			set;
+		}
+
+		private LocalizableString _rocaAmortizationNumber;
+		public LocalizableString RocaAmortizationNumber {
+			get {
+				return _rocaAmortizationNumber ?? (_rocaAmortizationNumber = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortizationNumber.Value"));
+			}
+		}
+
 		#endregion
 
 		#region Methods: Public
@@ -159,6 +196,31 @@
 			if (UseFlowEngineMode) {
 				if (!HasMapping("RocaParameterId")) {
 					writer.WriteValue("RocaParameterId", RocaParameterId, Guid.Empty);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RocaGracePeriodInMonths")) {
+					writer.WriteValue("RocaGracePeriodInMonths", RocaGracePeriodInMonths, 0);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RocaGracePeriodIntMethod")) {
+					writer.WriteValue("RocaGracePeriodIntMethod", RocaGracePeriodIntMethod, Guid.Empty);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RocaGracePeriodCycle")) {
+					writer.WriteValue("RocaGracePeriodCycle", RocaGracePeriodCycle, Guid.Empty);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RocaAmortizationParentObject")) {
+					writer.WriteValue("RocaAmortizationParentObject", RocaAmortizationParentObject, Guid.Empty);
+				}
+			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RocaParentObject")) {
+					writer.WriteValue("RocaParentObject", RocaParentObject, Guid.Empty);
 				}
 			}
 			writer.WriteFinishObject();
@@ -236,6 +298,36 @@
 						break;
 					}
 					RocaParameterId = reader.GetGuidValue();
+				break;
+				case "RocaGracePeriodInMonths":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					RocaGracePeriodInMonths = reader.GetIntValue();
+				break;
+				case "RocaGracePeriodIntMethod":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					RocaGracePeriodIntMethod = reader.GetGuidValue();
+				break;
+				case "RocaGracePeriodCycle":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					RocaGracePeriodCycle = reader.GetGuidValue();
+				break;
+				case "RocaAmortizationParentObject":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					RocaAmortizationParentObject = reader.GetGuidValue();
+				break;
+				case "RocaParentObject":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					RocaParentObject = reader.GetGuidValue();
 				break;
 			}
 		}

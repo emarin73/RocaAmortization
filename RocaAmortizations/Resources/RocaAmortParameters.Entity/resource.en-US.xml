@@ -9,6 +9,8 @@
 			<Item Name="Columns.Roca1stRepaymentDate.Description" Value="1st Repayment Date " />
 			<Item Name="Columns.RocaAmortizationTable.Caption" Value="Amortization Table" />
 			<Item Name="Columns.RocaAmortizationTable.Description" Value="Amortization Table" />
+			<Item Name="Columns.RocaAmortParent.Caption" Value="Amortization Parameter Object" />
+			<Item Name="Columns.RocaAmortParent.Description" Value="Amortization Parameter Object" />
 			<Item Name="Columns.RocaCompundFrequency.Caption" Value="Compound Frequency" />
 			<Item Name="Columns.RocaCompundFrequency.Description" Value="Compound Frequency" />
 			<Item Name="Columns.RocaGracePeriodCycle.Caption" Value="Grace Period Cycle" />

@@ -6,7 +6,15 @@
       "A2": "RocaProcessUserTask_GenerateSchedule",
       "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657",
       "B1": [],
-      "B2": [],
+      "B2": [
+        {
+          "UId": "50b587ce-9136-c923-71a0-17b3ea19b1df",
+          "A2": "RocaAmortizationNumber",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        }
+      ],
       "B3": [],
       "B6": "8eeadc64-a738-0d21-12ee-fdb57bfe98f2",
       "B8": "8.2.0.4183",
@@ -132,6 +140,64 @@
           "L1": "23018567-a13c-4320-8687-fd6f9e3699bd",
           "L8": {},
           "L6": true,
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "caf38a73-021b-4b83-2a2c-4c26d4bc7179",
+          "A2": "RocaGracePeriodInMonths",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {},
+          "L6": true,
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "ac537295-a79d-b5ca-9da1-b56e2312f178",
+          "A2": "RocaGracePeriodIntMethod",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L6": true,
+          "L9": "99d0a12c-ed3c-4fdb-b3c8-8e459b1c6b6a",
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "aceb67f7-8f4b-39da-72bb-3a537a5594d9",
+          "A2": "RocaGracePeriodCycle",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L9": "623375a9-cb7b-4e1c-a8ed-2be9b50429b3",
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "3c3d27e8-5aec-3ada-a655-47d73235f58c",
+          "A2": "RocaAmortizationParentObject",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L6": true,
+          "L9": "ff3c1ac8-f124-4514-a255-ba248965fbee",
+          "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "d4449cb2-8e5f-a0c4-8374-b6f0812e77dd",
+          "A2": "RocaParentObject",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L6": true,
+          "L9": "ff3c1ac8-f124-4514-a255-ba248965fbee",
           "L11": false
         }
       ],

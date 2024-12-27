@@ -2,12 +2,13 @@
   "Descriptor": {
     "UId": "44e1aca7-5766-4e08-908b-db3167f36033",
     "Name": "RocaLoanAmortizationTable",
-    "ModifiedOnUtc": "\/Date(1735244974000)\/",
+    "ModifiedOnUtc": "\/Date(1735244975000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Amortization Table"
+    "Caption": "Amortization Table",
+    "DependsOn": []
   }
 }

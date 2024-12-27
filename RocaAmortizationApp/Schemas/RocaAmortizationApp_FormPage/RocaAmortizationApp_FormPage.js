@@ -3,6 +3,27 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
+				"name": "Tabs",
+				"values": {
+					"styleType": "default",
+					"mode": "tab",
+					"bodyBackgroundColor": "primary-contrast-500",
+					"selectedTabTitleColor": "auto",
+					"tabTitleColor": "auto",
+					"underlineSelectedTabColor": "auto",
+					"headerBackgroundColor": "auto"
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "GeneralInfoTab",
+				"values": {
+					"iconPosition": "only-text",
+					"visible": true
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "CardToggleTabPanel",
 				"values": {
 					"styleType": "default",
@@ -38,10 +59,10 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 			},
 			{
 				"operation": "insert",
-				"name": "Button_c1nvssu",
+				"name": "Button_Calculate",
 				"values": {
 					"type": "crt.Button",
-					"caption": "#ResourceString(Button_c1nvssu_caption)#",
+					"caption": "#ResourceString(Button_Calculate_caption)#",
 					"color": "outline",
 					"disabled": false,
 					"size": "medium",
@@ -65,10 +86,10 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 			},
 			{
 				"operation": "insert",
-				"name": "Button_igge2v2",
+				"name": "Button_Refresh",
 				"values": {
 					"type": "crt.Button",
-					"caption": "#ResourceString(Button_igge2v2_caption)#",
+					"caption": "#ResourceString(Button_Refresh_caption)#",
 					"color": "default",
 					"disabled": false,
 					"size": "medium",
@@ -108,6 +129,50 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "ComboBox_ParentObject",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 2,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_RocaAmortParent_qiozk2z",
+					"labelPosition": "auto",
+					"control": "$PDS_RocaAmortParent_qiozk2z",
+					"listActions": [],
+					"showValueAsLink": true,
+					"controlActions": [],
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": "",
+					"valueDetails": null
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "addRecord_hd0c31j",
+				"values": {
+					"code": "addRecord",
+					"type": "crt.ComboboxSearchTextAction",
+					"icon": "combobox-add-new",
+					"caption": "#ResourceString(addRecord_hd0c31j_caption)#",
+					"clicked": {
+						"request": "crt.CreateRecordFromLookupRequest",
+						"params": {}
+					}
+				},
+				"parentName": "ComboBox_ParentObject",
+				"propertyName": "listActions",
 				"index": 0
 			},
 			{
@@ -680,6 +745,206 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 				"parentName": "DataGrid_AmortizationTable",
 				"propertyName": "bulkActions",
 				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "TabContainer_Application",
+				"values": {
+					"type": "crt.TabContainer",
+					"items": [],
+					"caption": "#ResourceString(TabContainer_Amortization_caption)#",
+					"iconPosition": "only-text",
+					"visible": true
+				},
+				"parentName": "Tabs",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_dn2wxvw",
+				"values": {
+					"type": "crt.GridContainer",
+					"items": [],
+					"rows": "minmax(32px, max-content)",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					}
+				},
+				"parentName": "TabContainer_Application",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "DateTimePicker_tb28a2l",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.DateTimePicker",
+					"pickerType": "date",
+					"label": "$Resources.Strings.PDS_Roca1stRepaymentDate_un834lh",
+					"labelPosition": "auto",
+					"control": "$PDS_Roca1stRepaymentDate_un834lh"
+				},
+				"parentName": "GridContainer_dn2wxvw",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "DataGrid_ho3es9z",
+				"values": {
+					"type": "crt.DataGrid",
+					"features": {
+						"rows": {
+							"selection": {
+								"enable": true,
+								"multiple": true
+							}
+						},
+						"editable": {
+							"enable": false,
+							"itemsCreation": false,
+							"floatingEditPanel": false
+						}
+					},
+					"items": "$DataGrid_ho3es9z",
+					"visible": true,
+					"fitContent": true,
+					"primaryColumnName": "DataGrid_ho3es9zDS_Id",
+					"columns": [
+						{
+							"id": "2b76a63a-15e1-be35-bf09-53a5fe07e79c",
+							"code": "DataGrid_ho3es9zDS_RocaAmortizationNumber",
+							"caption": "#ResourceString(DataGrid_ho3es9zDS_RocaAmortizationNumber)#",
+							"dataValueType": 27
+						},
+						{
+							"id": "d4f87e3d-4207-7476-9524-60faf2cbd9ba",
+							"code": "DataGrid_ho3es9zDS_RocaPeriodNumber",
+							"caption": "#ResourceString(DataGrid_ho3es9zDS_RocaPeriodNumber)#",
+							"dataValueType": 4
+						},
+						{
+							"id": "dd35b5d5-9799-83cb-e77f-00767cdd4f55",
+							"code": "DataGrid_ho3es9zDS_RocaAmortizationNumber",
+							"caption": "#ResourceString(DataGrid_ho3es9zDS_RocaAmortizationNumber)#",
+							"dataValueType": 27
+						},
+						{
+							"id": "aaf5a652-8567-2bc2-db1a-465a5ca9bbd6",
+							"code": "DataGrid_ho3es9zDS_RocaAmortizationBeginningBalance",
+							"caption": "#ResourceString(DataGrid_ho3es9zDS_RocaAmortizationBeginningBalance)#",
+							"dataValueType": 6
+						},
+						{
+							"id": "53579a07-c4a4-9e74-98e9-a6338b944cd4",
+							"code": "DataGrid_ho3es9zDS_RocaAmortizationAmount",
+							"caption": "#ResourceString(DataGrid_ho3es9zDS_RocaAmortizationAmount)#",
+							"dataValueType": 6
+						},
+						{
+							"id": "dd8ab9a3-32db-352e-b27a-61a0bdad70cd",
+							"code": "DataGrid_ho3es9zDS_RocaAmortizationPrincipal",
+							"caption": "#ResourceString(DataGrid_ho3es9zDS_RocaAmortizationPrincipal)#",
+							"dataValueType": 6
+						},
+						{
+							"id": "b478d03e-e65a-7c0c-03dd-8943868b22ce",
+							"code": "DataGrid_ho3es9zDS_RocaAmortizationInterest",
+							"caption": "#ResourceString(DataGrid_ho3es9zDS_RocaAmortizationInterest)#",
+							"dataValueType": 6
+						},
+						{
+							"id": "30fea271-6d48-a4d2-ccd0-700bf2fd4531",
+							"code": "DataGrid_ho3es9zDS_RocaAmortizationEndingBalance",
+							"caption": "#ResourceString(DataGrid_ho3es9zDS_RocaAmortizationEndingBalance)#",
+							"dataValueType": 6
+						}
+					],
+					"placeholder": false
+				},
+				"parentName": "TabContainer_Application",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "TabContainer_Loan",
+				"values": {
+					"type": "crt.TabContainer",
+					"items": [],
+					"caption": "#ResourceString(TabContainer_r28zy26_caption)#",
+					"iconPosition": "only-text",
+					"visible": true
+				},
+				"parentName": "Tabs",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_ap4wgka",
+				"values": {
+					"type": "crt.GridContainer",
+					"items": [],
+					"rows": "minmax(32px, max-content)",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					}
+				},
+				"parentName": "TabContainer_Loan",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "TabContainer_Inquiry",
+				"values": {
+					"type": "crt.TabContainer",
+					"items": [],
+					"caption": "#ResourceString(TabContainer_c0k8f09_caption)#",
+					"iconPosition": "only-text",
+					"visible": true
+				},
+				"parentName": "Tabs",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "GridContainer_xwn59yr",
+				"values": {
+					"type": "crt.GridContainer",
+					"items": [],
+					"rows": "minmax(32px, max-content)",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					}
+				},
+				"parentName": "TabContainer_Inquiry",
+				"propertyName": "items",
+				"index": 0
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -757,7 +1022,7 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 								"default": [
 									{
 										"direction": "desc",
-										"columnName": "RocaAmortParameter"
+										"columnName": "RocaAmortizationBeginningBalance"
 									}
 								]
 							}
@@ -811,6 +1076,66 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 								}
 							}
 						}
+					},
+					"PDS_RocaAmortParent_qiozk2z": {
+						"modelConfig": {
+							"path": "PDS.RocaAmortParent"
+						}
+					},
+					"PDS_Roca1stRepaymentDate_un834lh": {
+						"modelConfig": {
+							"path": "PDS.Roca1stRepaymentDate"
+						}
+					},
+					"DataGrid_ho3es9z": {
+						"isCollection": true,
+						"modelConfig": {
+							"path": "DataGrid_ho3es9zDS"
+						},
+						"viewModelConfig": {
+							"attributes": {
+								"DataGrid_ho3es9zDS_RocaAmortizationNumber": {
+									"modelConfig": {
+										"path": "DataGrid_ho3es9zDS.RocaAmortizationNumber"
+									}
+								},
+								"DataGrid_ho3es9zDS_RocaPeriodNumber": {
+									"modelConfig": {
+										"path": "DataGrid_ho3es9zDS.RocaPeriodNumber"
+									}
+								},
+								"DataGrid_ho3es9zDS_RocaAmortizationBeginningBalance": {
+									"modelConfig": {
+										"path": "DataGrid_ho3es9zDS.RocaAmortizationBeginningBalance"
+									}
+								},
+								"DataGrid_ho3es9zDS_RocaAmortizationAmount": {
+									"modelConfig": {
+										"path": "DataGrid_ho3es9zDS.RocaAmortizationAmount"
+									}
+								},
+								"DataGrid_ho3es9zDS_RocaAmortizationPrincipal": {
+									"modelConfig": {
+										"path": "DataGrid_ho3es9zDS.RocaAmortizationPrincipal"
+									}
+								},
+								"DataGrid_ho3es9zDS_RocaAmortizationInterest": {
+									"modelConfig": {
+										"path": "DataGrid_ho3es9zDS.RocaAmortizationInterest"
+									}
+								},
+								"DataGrid_ho3es9zDS_RocaAmortizationEndingBalance": {
+									"modelConfig": {
+										"path": "DataGrid_ho3es9zDS.RocaAmortizationEndingBalance"
+									}
+								},
+								"DataGrid_ho3es9zDS_Id": {
+									"modelConfig": {
+										"path": "DataGrid_ho3es9zDS.Id"
+									}
+								}
+							}
+						}
 					}
 				}
 			},
@@ -836,6 +1161,12 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 						"DataGrid_vs1cy49DS": [
 							{
 								"attributePath": "RocaAmortParameter",
+								"relationPath": "PDS.Id"
+							}
+						],
+						"DataGrid_ho3es9zDS": [
+							{
+								"attributePath": "RocaAmortizationApplicationNumber",
 								"relationPath": "PDS.Id"
 							}
 						]
@@ -869,6 +1200,36 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 								},
 								"RocaAmortizationDate": {
 									"path": "RocaAmortizationDate"
+								},
+								"RocaAmortizationBeginningBalance": {
+									"path": "RocaAmortizationBeginningBalance"
+								},
+								"RocaAmortizationAmount": {
+									"path": "RocaAmortizationAmount"
+								},
+								"RocaAmortizationPrincipal": {
+									"path": "RocaAmortizationPrincipal"
+								},
+								"RocaAmortizationInterest": {
+									"path": "RocaAmortizationInterest"
+								},
+								"RocaAmortizationEndingBalance": {
+									"path": "RocaAmortizationEndingBalance"
+								}
+							}
+						}
+					},
+					"DataGrid_ho3es9zDS": {
+						"type": "crt.EntityDataSource",
+						"scope": "viewElement",
+						"config": {
+							"entitySchemaName": "RocaLoanAmortizationTable",
+							"attributes": {
+								"RocaAmortizationNumber": {
+									"path": "RocaAmortizationNumber"
+								},
+								"RocaPeriodNumber": {
+									"path": "RocaPeriodNumber"
 								},
 								"RocaAmortizationBeginningBalance": {
 									"path": "RocaAmortizationBeginningBalance"

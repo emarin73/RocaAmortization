@@ -1,6 +1,7 @@
 <Project>
 	<ItemGroup Label="Entity Files" Condition="'$(PkgPath)' != ''">
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaAmortParameters/RocaAmortParameters.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaAmortParameters/RocaAmortParameters.cs')" />
+		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaAmortParentObject/RocaAmortParentObject.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaAmortParentObject/RocaAmortParentObject.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaCollateralAllocSource/RocaCollateralAllocSource.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaCollateralAllocSource/RocaCollateralAllocSource.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaCollaterals/RocaCollaterals.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaCollaterals/RocaCollaterals.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaCollateralType/RocaCollateralType.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaCollateralType/RocaCollateralType.cs')" />

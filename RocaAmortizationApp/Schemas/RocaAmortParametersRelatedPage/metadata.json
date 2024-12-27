@@ -1,0 +1,44 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "ff47b085-b42a-4f69-a816-f77cec983af6",
+      "A2": "RocaAmortParametersRelatedPage",
+      "A5": "52e02457-d24c-4eae-aa35-da42c71755b2",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "e03ae09b-14d1-45c0-af68-f6d8af97cff2",
+      "B8": "8.2.0.4183",
+      "AD1": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+  "Pages": [
+    {
+      "UId": "aa22bb99-3a75-7324-4927-eb6460c4eba0",
+      "PageSchemaUId": "4f9a43f8-37bd-47d2-b4d1-1018faf2aafe",
+      "IsDefault": false,
+      "IsSspDefault": false,
+      "Actions": {
+        "Add": true
+      },
+      "Role": "a29a3ba5-4b0d-de11-9a51-005056c00008",
+      "TypeColumnValue": null
+    },
+    {
+      "UId": "2fad9dcf-83de-c1b0-b040-373efac7fadd",
+      "PageSchemaUId": "a38861e3-9683-424c-b035-e4d943d0616e",
+      "IsDefault": true,
+      "IsSspDefault": false,
+      "Actions": null,
+      "Role": "a29a3ba5-4b0d-de11-9a51-005056c00008",
+      "TypeColumnValue": null
+    }
+  ],
+  "TypeColumnUId": null
+}
+    }
+  }
+}
