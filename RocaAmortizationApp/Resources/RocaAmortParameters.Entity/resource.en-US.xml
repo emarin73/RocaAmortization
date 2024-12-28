@@ -2,28 +2,8 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Amortization Parameters" />
-			<Item Name="Columns.CreatedBy.Caption" Value="Created by" />
-			<Item Name="Columns.CreatedOn.Caption" Value="Created on" />
-			<Item Name="Columns.Id.Caption" Value="Id" />
-			<Item Name="Columns.ModifiedBy.Caption" Value="Modified by" />
-			<Item Name="Columns.ModifiedOn.Caption" Value="Modified on" />
-			<Item Name="Columns.ProcessListeners.Caption" Value="Active processes" />
-			<Item Name="Columns.Roca1stDisbursementDate.Caption" Value="1st Disbursement Date" />
-			<Item Name="Columns.Roca1stRepaymentDate.Caption" Value="1st Repayment Date" />
-			<Item Name="Columns.RocaAmortizationTable.Caption" Value="Amortization Table" />
-			<Item Name="Columns.RocaAmortParent.Caption" Value="Amortization Parameter Object" />
-			<Item Name="Columns.RocaCompundFrequency.Caption" Value="Compound Frequency" />
-			<Item Name="Columns.RocaGracePeriodCycle.Caption" Value="Grace Period Cycle" />
-			<Item Name="Columns.RocaGracePeriodInMonths.Caption" Value="Grace Period In Months" />
-			<Item Name="Columns.RocaGracePeriodIntMethod.Caption" Value="Grace Period Interest Method" />
-			<Item Name="Columns.RocaInterestRate.Caption" Value="Rate" />
-			<Item Name="Columns.RocaLoanAmount.Caption" Value="Loan Amount" />
-			<Item Name="Columns.RocaLoanTermInMonths.Caption" Value="Loan Term in Months" />
-			<Item Name="Columns.RocaLoanType.Caption" Value="Loan Type" />
-			<Item Name="Columns.RocaName.Caption" Value="Name" />
-			<Item Name="Columns.RocaPaymentFrequency.Caption" Value="Payment Frequency" />
-			<Item Name="EventsProcessSchema.Caption" Value="Business process" />
+			<Item Name="Columns.RocaGracePeriodCompCycle.Caption" Value="Grace Period Compounding Cycle" />
+			<Item Name="Columns.RocaGracePeriodCompCycle.Description" Value="Grace Period Compounding Cycle" />
 		</Items>
 	</Group>
 </Resources>

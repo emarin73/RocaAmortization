@@ -9,6 +9,7 @@
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaColStatus/RocaColStatus.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaColStatus/RocaColStatus.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaColTypeClassification/RocaColTypeClassification.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaColTypeClassification/RocaColTypeClassification.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaCompoundFrequency/RocaCompoundFrequency.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaCompoundFrequency/RocaCompoundFrequency.cs')" />
+		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaCompoundingCycle/RocaCompoundingCycle.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaCompoundingCycle/RocaCompoundingCycle.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaGracePeriodCycle/RocaGracePeriodCycle.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaGracePeriodCycle/RocaGracePeriodCycle.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaGracePeriodIntMethod/RocaGracePeriodIntMethod.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaGracePeriodIntMethod/RocaGracePeriodIntMethod.cs')" />
 		<Compile Include="$(PkgPath)/RocaAmortizations/Schemas/RocaInquiryStatus/RocaInquiryStatus.cs" Condition="Exists('$(PkgPath)/RocaAmortizations/Schemas/RocaInquiryStatus/RocaInquiryStatus.cs')" />

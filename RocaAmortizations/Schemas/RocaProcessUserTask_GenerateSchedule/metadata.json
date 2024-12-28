@@ -264,6 +264,18 @@
           "L6": true,
           "L9": "ff3c1ac8-f124-4514-a255-ba248965fbee",
           "L11": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "e2a513b1-163d-7202-3a4e-b5278d946d29",
+          "A2": "RocaGracePeriodCompoundingCycle",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "L8": {},
+          "L6": true,
+          "L9": "92eb7857-2671-4569-8a6a-d811e3991674",
+          "L11": false
         }
       ],
       "FK12": "#839DC3",

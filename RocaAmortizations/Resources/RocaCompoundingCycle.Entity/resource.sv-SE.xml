@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Resources Culture="en-US">
+<Resources Culture="sv-SE">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Amortization App (Page settings)" />
+			<Item Name="Caption" Value="Grace Period Compounding Cycle" />
 		</Items>
 	</Group>
 </Resources>

@@ -14,6 +14,13 @@
 - MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16
 - MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16
 - MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16
++ MetaData.Schema.D20.FA4 true
++ MetaData.Schema.D20.FA5 true
++ MetaData.Schema.D20.FA6 true
++ MetaData.Schema.D20.FA7 true
++ MetaData.Schema.D20.FA11 true
++ MetaData.Schema.D20.FA12 true
++ MetaData.Schema.D20.FA15 true
 = MetaData.Schema.D36.A3 "d271461d-980d-4ae4-8597-4817609790af"
 = MetaData.Schema.D36.BS1 false
 + MetaData.Schema.B7 true

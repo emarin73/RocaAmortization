@@ -2,10 +2,10 @@
   "Descriptor": {
     "UId": "0a75a51f-0068-431b-8b3d-47cd4caa3fff",
     "Name": "RocaAmortParameters",
-    "ModifiedOnUtc": "\/Date(1735326646000)\/",
+    "ModifiedOnUtc": "\/Date(1735427334000)\/",
     "Parent": {
-      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
-      "Name": "BaseEntity"
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
     },
     "ManagerName": "EntitySchemaManager",
     "Caption": "Amortization Parameters"

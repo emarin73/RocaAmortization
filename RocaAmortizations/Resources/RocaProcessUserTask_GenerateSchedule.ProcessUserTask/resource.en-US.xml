@@ -21,6 +21,7 @@
 			<Item Name="Parameters.RocaAmortizationTable.Caption" Value="Amortization Table" />
 			<Item Name="Parameters.RocaCompoundFrequency.Caption" Value="Compound Frequency" />
 			<Item Name="Parameters.RocaFixedPrincipal.Caption" Value="Fixed Principal" />
+			<Item Name="Parameters.RocaGracePeriodCompoundingCycle.Caption" Value="Grace Period Compounding Cycle" />
 			<Item Name="Parameters.RocaGracePeriodCycle.Caption" Value="Grace Period Cycle" />
 			<Item Name="Parameters.RocaGracePeriodInMonths.Caption" Value="Grace Period in Months" />
 			<Item Name="Parameters.RocaGracePeriodIntMethod.Caption" Value="Grace Period Interest Method" />

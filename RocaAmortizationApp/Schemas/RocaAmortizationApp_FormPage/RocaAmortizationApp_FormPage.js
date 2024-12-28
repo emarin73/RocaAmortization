@@ -327,6 +327,40 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 			},
 			{
 				"operation": "insert",
+				"name": "ComboBox_CompCycle",
+				"values": {
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_RocaColumn1_1n7k163",
+					"labelPosition": "auto",
+					"control": "$PDS_RocaColumn1_1n7k163",
+					"listActions": [],
+					"showValueAsLink": true,
+					"controlActions": [],
+					"valueDetails": null
+				},
+				"parentName": "FlexContainer_g5e04z4",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "addRecord_r08jpsm",
+				"values": {
+					"code": "addRecord",
+					"type": "crt.ComboboxSearchTextAction",
+					"icon": "combobox-add-new",
+					"caption": "#ResourceString(addRecord_r08jpsm_caption)#",
+					"clicked": {
+						"request": "crt.CreateRecordFromLookupRequest",
+						"params": {}
+					}
+				},
+				"parentName": "ComboBox_CompCycle",
+				"propertyName": "listActions",
+				"index": 0
+			},
+			{
+				"operation": "insert",
 				"name": "Label_LoanParam",
 				"values": {
 					"type": "crt.Label",
@@ -1135,6 +1169,11 @@ define("RocaAmortizationApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, funct
 									}
 								}
 							}
+						}
+					},
+					"PDS_RocaColumn1_1n7k163": {
+						"modelConfig": {
+							"path": "PDS.RocaGracePeriodCompCycle"
 						}
 					}
 				}

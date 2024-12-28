@@ -4,6 +4,7 @@
     "Name": "RocaAmortParametersRelatedPage",
     "ModifiedOnUtc": "\/Date(1735330685000)\/",
     "ManagerName": "AddonSchemaManager",
-    "Caption": "Amortization Parameters (Page settings)"
+    "Caption": "Amortization Parameters (Page settings)",
+    "DependsOn": []
   }
 }

@@ -13,6 +13,8 @@
 			<Item Name="Columns.RocaAmortParent.Description" Value="Amortization Parameter Object" />
 			<Item Name="Columns.RocaCompundFrequency.Caption" Value="Compound Frequency" />
 			<Item Name="Columns.RocaCompundFrequency.Description" Value="Compound Frequency" />
+			<Item Name="Columns.RocaGracePeriodCompCycle.Caption" Value="Grace Period Compounding Cycle" />
+			<Item Name="Columns.RocaGracePeriodCompCycle.Description" Value="Grace Period Compounding Cycle" />
 			<Item Name="Columns.RocaGracePeriodCycle.Caption" Value="Grace Period Cycle" />
 			<Item Name="Columns.RocaGracePeriodCycle.Description" Value="Grace Period Cycle" />
 			<Item Name="Columns.RocaGracePeriodInMonths.Caption" Value="Grace Period In Months" />

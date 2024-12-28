@@ -8,6 +8,7 @@
       "Name": "ListPageV2Template"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "Amortization App list page"
+    "Caption": "Amortization App list page",
+    "DependsOn": []
   }
 }

@@ -29,6 +29,7 @@
 	[DesignModeProperty(Name = "RocaGracePeriodIntMethod", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaGracePeriodIntMethod.Caption", DescriptionResourceItem = "Parameters.RocaGracePeriodIntMethod.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "RocaGracePeriodCycle", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaGracePeriodCycle.Caption", DescriptionResourceItem = "Parameters.RocaGracePeriodCycle.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "RocaParentObject", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaParentObject.Caption", DescriptionResourceItem = "Parameters.RocaParentObject.Caption", UseSolutionStorage = true)]
+	[DesignModeProperty(Name = "RocaGracePeriodCompoundingCycle", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaGracePeriodCompoundingCycle.Caption", DescriptionResourceItem = "Parameters.RocaGracePeriodCompoundingCycle.Caption", UseSolutionStorage = true)]
 	/// <exclude/>
 	public partial class RocaProcessUserTask_GenerateSchedule : ProcessUserTask
 	{
@@ -115,6 +116,11 @@
 		}
 
 		public virtual Guid RocaParentObject {
+			get;
+			set;
+		}
+
+		public virtual Guid RocaGracePeriodCompoundingCycle {
 			get;
 			set;
 		}
@@ -289,6 +295,11 @@
 					writer.WriteValue("RocaParentObject", RocaParentObject, Guid.Empty);
 				}
 			}
+			if (UseFlowEngineMode) {
+				if (!HasMapping("RocaGracePeriodCompoundingCycle")) {
+					writer.WriteValue("RocaGracePeriodCompoundingCycle", RocaGracePeriodCompoundingCycle, Guid.Empty);
+				}
+			}
 			writer.WriteFinishObject();
 		}
 
@@ -388,6 +399,12 @@
 						break;
 					}
 					RocaParentObject = reader.GetGuidValue();
+				break;
+				case "RocaGracePeriodCompoundingCycle":
+					if (!UseFlowEngineMode) {
+						break;
+					}
+					RocaGracePeriodCompoundingCycle = reader.GetGuidValue();
 				break;
 			}
 		}

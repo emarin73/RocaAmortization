@@ -43,6 +43,7 @@ namespace Terrasoft.Core.Process.Configuration
                 RocaGracePeriodInMonths,
                 RocaGracePeriodIntMethod,
                 RocaGracePeriodCycle,
+                RocaGracePeriodCompoundingCycle,
                 RocaParentObject
             );
 
@@ -172,6 +173,7 @@ namespace Terrasoft.Core.Process.Configuration
             int gracePeriodMonths,
             Guid gracePeriodIntMethod,
             Guid gracePeriodCycle,
+            Guid gracePeriodCompoundingCycle,
             Guid parentObjectTypeId)
         {
             // Make sure parameterId exists in the parent table
@@ -199,16 +201,21 @@ namespace Terrasoft.Core.Process.Configuration
             // Handle grace period based on method
             if (gracePeriodMonths > 0)
             {
+                int numberOfGracePeriods = gracePeriodMonths / (12/GetGracePeriodCycleValue(gracePeriodCycle));
+
+                // Calculate periodic rate  
+                decimal periodicRate = CalculateGracePeriodEffectiveRate(rate, gracePeriodCycle, gracePeriodCompoundingCycle);
+
                 switch (gracePeriodMethod)
                 {
                     case "1. Due On Cycle From Disbursement Date":
                         // Generate initial grace period (GPD0000)
                         GenerateInitialGracePeriod(schema, firstDisbursementDate, loanAmount, rate, gracePeriodIntMethod, parameterId, parentObjectTypeId);
                         // Handle interest payments during grace period based on cycle
-                        for (int gpIndex = 1; gpIndex <= gracePeriodMonths; gpIndex++)
+                        for (int gpIndex = 1; gpIndex <= numberOfGracePeriods; gpIndex++)
                         {
                             DateTime cyclePaymentDate = GetEndOfMonth(firstDisbursementDate.AddMonths(gpIndex));
-                            decimal interestPayment = loanAmount * (rate / 1200m); // Monthly rate
+                            decimal interestPayment = loanAmount * periodicRate; // periodic rate
                             
                             var interestEntry = CreateScheduleEntry(
                                 schema,             // schema
@@ -234,10 +241,10 @@ namespace Terrasoft.Core.Process.Configuration
                         decimal accumulatedInterest = 0;
                         DateTime bpPaymentDate = firstDisbursementDate;
 
-                        for (; bpIndex <= gracePeriodMonths; bpIndex++)
+                        for (; bpIndex <= numberOfGracePeriods; bpIndex++)
                         {
-                            decimal monthlyInterest = loanAmount * (rate / 1200m);
-                            accumulatedInterest += monthlyInterest;
+                            decimal interest = loanAmount * CalculateEffectiveRate(rate, compoundFrequency, paymentFrequency); // effective rate
+                            accumulatedInterest += interest;
                             bpPaymentDate = GetEndOfMonth(firstDisbursementDate.AddMonths(bpIndex));
                         }    
                         
@@ -265,7 +272,7 @@ namespace Terrasoft.Core.Process.Configuration
                         // Generate initial grace period (GPD0000)
                         GenerateInitialGracePeriod(schema, firstDisbursementDate, loanAmount, rate, gracePeriodIntMethod, parameterId, parentObjectTypeId);
                         // Handle interest payments during grace period based on cycle  
-                        for (int noIntIndex = 1; noIntIndex <= gracePeriodMonths; noIntIndex++)
+                        for (int noIntIndex = 1; noIntIndex <= numberOfGracePeriods; noIntIndex++)
                         {
                             DateTime noIntPaymentDate = GetEndOfMonth(firstDisbursementDate.AddMonths(noIntIndex));
                                                     
@@ -289,9 +296,9 @@ namespace Terrasoft.Core.Process.Configuration
                 }
             }
             
-            // Calculate payment frequency in months
-            int paymentIntervalMonths = GetPaymentIntervalInMonths(paymentFrequency);
-            int numberOfPayments = termsInMonths / paymentIntervalMonths;
+            // Calculate number of payments based on payment frequency
+            int numberOfPayments = termsInMonths / (12/GetPaymentFrequencyValue(paymentFrequency));
+            int paymentIntervalMonths = termsInMonths / numberOfPayments;
             
             // Calculate effective interest rate per payment period
             decimal effectiveRate = CalculateEffectiveRate(rate, compoundFrequency, paymentFrequency);
@@ -305,7 +312,7 @@ namespace Terrasoft.Core.Process.Configuration
             
             var scheduleInitialEntry = schema.CreateEntity(userConnection);
             scheduleInitialEntry.SetDefColumnValues();
-             scheduleInitialEntry.PrimaryColumnValue = Guid.NewGuid();
+            scheduleInitialEntry.PrimaryColumnValue = Guid.NewGuid();
           
             // Calculate initial payment based on loan type
             if (loanTypeCode == "1. Amortized")
@@ -469,26 +476,110 @@ namespace Terrasoft.Core.Process.Configuration
         }
 
         private DateTime GetEndOfMonth(DateTime date)
-
         {
            return new DateTime(date.Year, date.Month, DateTime.DaysInMonth(date.Year, date.Month));
         }
 
-        private int GetPaymentIntervalInMonths(Guid paymentFrequency)
+        private int GetGracePeriodCompoundingCycleValue(Guid gracePeriodCompoundingCycleId)
         {
-            // Add lookup logic for payment frequency
-            // Example: Monthly = 1, Quarterly = 3, Semi-annual = 6, Annual = 12
-            return 1; // Default to monthly
+            var select = new Select(UserConnection)
+                .Column("RocaCompCycleValue")
+                .From("RocaCompoundingCycle")
+                .Where("Id").IsEqual(Column.Parameter(gracePeriodCompoundingCycleId)) as Select;
+            
+            var result = select.ExecuteScalar<int>();
+            
+            if (result == 0)
+            {
+                throw new InvalidOperationException($"Grace period compounding cycle with ID {gracePeriodCompoundingCycleId} not found or has invalid value");
+            }
+
+            return result;
+        }    
+      private int GetGracePeriodCycleValue(Guid gracePeriodCycleId)
+        {
+            var select = new Select(UserConnection)
+                .Column("RocaCycleValue")
+                .From("RocaGracePeriodCycle")
+                .Where("Id").IsEqual(Column.Parameter(gracePeriodCycleId)) as Select;
+            
+            var result = select.ExecuteScalar<int>();
+            
+            if (result == 0)
+            {
+                throw new InvalidOperationException($"Grace period cycle with ID {gracePeriodCycleId} not found or has invalid value");
+            }
+
+            return result;
+        }       
+
+        private int GetPaymentFrequencyValue(Guid paymentFrequencyId)
+        {
+            var select = new Select(UserConnection)
+                .Column("RocaPymtFreqValue")  // Column name for the frequency value
+                .From("RocaPaymentFrequency")  // Your lookup table name
+                .Where("Id").IsEqual(Column.Parameter(paymentFrequencyId)) as Select;
+            
+            var result = select.ExecuteScalar<int>();
+            
+            if (result == 0)
+            {
+                throw new InvalidOperationException($"Payment frequency with ID {paymentFrequencyId} not found or has invalid value");
+            }
+
+            return result;
+        }
+        
+      private string GetPaymentFrequencyName(Guid paymentFrequencyId)
+        {
+            var select = new Select(UserConnection)
+                .Column("Name")  // Column name for the frequency value
+                .From("RocaPaymentFrequency")  // Your lookup table name
+                .Where("Id").IsEqual(Column.Parameter(paymentFrequencyId)) as Select;
+            
+            var result = select.ExecuteScalar<string>();
+            
+            if (result == null)
+            {
+                throw new InvalidOperationException($"Payment frequency with ID {paymentFrequencyId} not found or has invalid value");
+            }
+
+            return result;
         }
 
-        private decimal CalculateEffectiveRate(decimal annualRate, Guid compoundFrequency, Guid paymentFrequency)
+        private decimal CalculateEffectiveRate(decimal annualRate, Guid gracePeriodCycle, Guid gracePeriodCompoundingCycle)
         {
             // Convert annual rate from percentage to decimal (e.g., 12% becomes 0.12)
             decimal rateAsDecimal = annualRate / 100m;
 
             // Get compound and payment frequencies from lookups
-            int compoundPerYear = GetCompoundFrequencyPerYear(compoundFrequency);
-            int paymentsPerYear = 12 / GetPaymentIntervalInMonths(paymentFrequency);
+            int compoundPerYear = GetGracePeriodCompoundingCycleValue(gracePeriodCompoundingCycle);
+            int paymentsPerYear = GetGracePeriodCycleValue(gracePeriodCycle);
+
+            // Step 1: Calculate Effective Annual Rate (EAR)
+            // Formula: EAR = (1 + r/m)^m - 1
+            // where r is nominal annual rate and m is number of compounding periods per year
+            double nominalRate = (double)rateAsDecimal;
+            double compoundingsPerYear = compoundPerYear;
+            
+            double effectiveAnnualRate = Math.Pow(1 + (nominalRate / compoundingsPerYear), compoundingsPerYear) - 1;
+
+            // Step 2: Convert EAR to payment period rate
+            // Formula: (1 + EAR)^(1/p) - 1
+            // where p is number of payments per year
+            double paymentPeriodRate = Math.Pow(1 + effectiveAnnualRate, 1.0 / paymentsPerYear) - 1;
+
+            return (decimal)paymentPeriodRate;
+        }
+
+        private decimal CalculateGracePeriodEffectiveRate(decimal annualRate, Guid gracePeriodCycle, Guid gracePeriodCompoundingCycle)
+        {
+            // Convert annual rate from percentage to decimal (e.g., 12% becomes 0.12)
+            decimal rateAsDecimal = annualRate / 100m;
+
+            // Get compound and payment frequencies from lookups
+            int compoundPerYear = GetGracePeriodCompoundingCycleValue(gracePeriodCompoundingCycle);
+            int paymentsPerYear = GetGracePeriodCycleValue(gracePeriodCycle);
 
             // Step 1: Calculate Effective Annual Rate (EAR)
             // Formula: EAR = (1 + r/m)^m - 1

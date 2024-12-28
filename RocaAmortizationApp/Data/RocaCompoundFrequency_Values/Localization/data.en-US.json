@@ -105,12 +105,12 @@
         {
           "SchemaColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
           "ColumnName": "Name",
-          "Value": "Biweekly"
+          "Value": "Bi-weekly"
         },
         {
           "SchemaColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
           "ColumnName": "Description",
-          "Value": "Biweekly"
+          "Value": "Bi-weekly"
         }
       ]
     },
