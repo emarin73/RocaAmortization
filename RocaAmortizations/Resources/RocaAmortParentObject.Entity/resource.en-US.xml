@@ -3,7 +3,8 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Amortization Parent Object" />
-			<Item Name="EventsProcessSchema.Caption" Value="Business process" />
+			<Item Name="Description" Value="Amortization Parent Object" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
 		</Items>
 	</Group>
 </Resources>

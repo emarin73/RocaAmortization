@@ -28,7 +28,6 @@
 	[DesignModeProperty(Name = "RocaGracePeriodInMonths", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaGracePeriodInMonths.Caption", DescriptionResourceItem = "Parameters.RocaGracePeriodInMonths.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "RocaGracePeriodIntMethod", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaGracePeriodIntMethod.Caption", DescriptionResourceItem = "Parameters.RocaGracePeriodIntMethod.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "RocaGracePeriodCycle", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaGracePeriodCycle.Caption", DescriptionResourceItem = "Parameters.RocaGracePeriodCycle.Caption", UseSolutionStorage = true)]
-	[DesignModeProperty(Name = "RocaAmortizationParentObject", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaAmortizationParentObject.Caption", DescriptionResourceItem = "Parameters.RocaAmortizationParentObject.Caption", UseSolutionStorage = true)]
 	[DesignModeProperty(Name = "RocaParentObject", Group = "", ValuesProvider = "ProcessSchemaParameterValueProvider", Editor="xtype=processschemaparametervalueedit;dataProvider=processschemaparametervalueprovider", ResourceManager = "0cfa8cc95a344f14a514fe116ae9f504", CaptionResourceItem = "Parameters.RocaParentObject.Caption", DescriptionResourceItem = "Parameters.RocaParentObject.Caption", UseSolutionStorage = true)]
 	/// <exclude/>
 	public partial class RocaProcessUserTask_GenerateSchedule : ProcessUserTask
@@ -115,11 +114,6 @@
 			set;
 		}
 
-		public virtual Guid RocaAmortizationParentObject {
-			get;
-			set;
-		}
-
 		public virtual Guid RocaParentObject {
 			get;
 			set;
@@ -129,6 +123,83 @@
 		public LocalizableString RocaAmortizationNumber {
 			get {
 				return _rocaAmortizationNumber ?? (_rocaAmortizationNumber = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortizationNumber.Value"));
+			}
+		}
+
+		private LocalizableString _rocaLoanInquiryId;
+		public LocalizableString RocaLoanInquiryId {
+			get {
+				return _rocaLoanInquiryId ?? (_rocaLoanInquiryId = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaLoanInquiryId.Value"));
+			}
+		}
+
+		private LocalizableString _rocaAmortizationApplicationNumberId;
+		public LocalizableString RocaAmortizationApplicationNumberId {
+			get {
+				return _rocaAmortizationApplicationNumberId ?? (_rocaAmortizationApplicationNumberId = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortizationApplicationNumberId.Value"));
+			}
+		}
+
+		private LocalizableString _rocaAmortizationLoanId;
+		public LocalizableString RocaAmortizationLoanId {
+			get {
+				return _rocaAmortizationLoanId ?? (_rocaAmortizationLoanId = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortizationLoanId.Value"));
+			}
+		}
+
+		private LocalizableString _rocaAmortParameterId;
+		public LocalizableString RocaAmortParameterId {
+			get {
+				return _rocaAmortParameterId ?? (_rocaAmortParameterId = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortParameterId.Value"));
+			}
+		}
+
+		private LocalizableString _rocaAmortizationEndingBalance;
+		public LocalizableString RocaAmortizationEndingBalance {
+			get {
+				return _rocaAmortizationEndingBalance ?? (_rocaAmortizationEndingBalance = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortizationEndingBalance.Value"));
+			}
+		}
+
+		private LocalizableString _rocaAmortizationAmount;
+		public LocalizableString RocaAmortizationAmount {
+			get {
+				return _rocaAmortizationAmount ?? (_rocaAmortizationAmount = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortizationAmount.Value"));
+			}
+		}
+
+		private LocalizableString _rocaAmortizationInterest;
+		public LocalizableString RocaAmortizationInterest {
+			get {
+				return _rocaAmortizationInterest ?? (_rocaAmortizationInterest = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortizationInterest.Value"));
+			}
+		}
+
+		private LocalizableString _rocaAmortizationPrincipal;
+		public LocalizableString RocaAmortizationPrincipal {
+			get {
+				return _rocaAmortizationPrincipal ?? (_rocaAmortizationPrincipal = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortizationPrincipal.Value"));
+			}
+		}
+
+		private LocalizableString _rocaAmortizationBeginningBalance;
+		public LocalizableString RocaAmortizationBeginningBalance {
+			get {
+				return _rocaAmortizationBeginningBalance ?? (_rocaAmortizationBeginningBalance = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortizationBeginningBalance.Value"));
+			}
+		}
+
+		private LocalizableString _rocaAmortizationDate;
+		public LocalizableString RocaAmortizationDate {
+			get {
+				return _rocaAmortizationDate ?? (_rocaAmortizationDate = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaAmortizationDate.Value"));
+			}
+		}
+
+		private LocalizableString _rocaPeriodNumber;
+		public LocalizableString RocaPeriodNumber {
+			get {
+				return _rocaPeriodNumber ?? (_rocaPeriodNumber = new LocalizableString(Storage, Schema.GetResourceManagerName(), "LocalizableStrings.RocaPeriodNumber.Value"));
 			}
 		}
 
@@ -211,11 +282,6 @@
 			if (UseFlowEngineMode) {
 				if (!HasMapping("RocaGracePeriodCycle")) {
 					writer.WriteValue("RocaGracePeriodCycle", RocaGracePeriodCycle, Guid.Empty);
-				}
-			}
-			if (UseFlowEngineMode) {
-				if (!HasMapping("RocaAmortizationParentObject")) {
-					writer.WriteValue("RocaAmortizationParentObject", RocaAmortizationParentObject, Guid.Empty);
 				}
 			}
 			if (UseFlowEngineMode) {
@@ -316,12 +382,6 @@
 						break;
 					}
 					RocaGracePeriodCycle = reader.GetGuidValue();
-				break;
-				case "RocaAmortizationParentObject":
-					if (!UseFlowEngineMode) {
-						break;
-					}
-					RocaAmortizationParentObject = reader.GetGuidValue();
 				break;
 				case "RocaParentObject":
 					if (!UseFlowEngineMode) {

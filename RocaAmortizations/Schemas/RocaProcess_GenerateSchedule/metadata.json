@@ -25,6 +25,7 @@
       ],
       "IJ1": true,
       "BK8": "bb4d6607-026b-4b27-b640-8f5c77c1e89d",
+      "IJ8": true,
       "IJ10": true,
       "BK15": [
         {
@@ -236,22 +237,6 @@
           "GT1": {
             "GS1": 3,
             "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Element:{6e8f798c-59ff-43af-a66f-774a3220eb16}].[Parameter:{9d87bb6e-3b64-44df-a093-f696dc640d4c}].[EntityColumn:{8c8d08ba-8575-1d4a-ef34-248cb3a466c1}]#]",
-            "GS5": "551cf61b-389c-4db4-b3fd-6bd733157bd2"
-          }
-        },
-        {
-          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
-          "UId": "5f921c95-3656-46c0-a842-cd4e99d9a124",
-          "A2": "UserTask2",
-          "A3": "551cf61b-389c-4db4-b3fd-6bd733157bd2",
-          "A4": "551cf61b-389c-4db4-b3fd-6bd733157bd2",
-          "GT2": "[Element:{ac19109f-ad9c-4bc9-a714-b93830f6ee05}].[Parameter:{e26b6249-dd30-452f-85b9-22b909ad6250}]",
-          "GT3": "e26b6249-dd30-452f-85b9-22b909ad6250",
-          "GT5": "3c3d27e8-5aec-3ada-a655-47d73235f58c",
-          "GT4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
-          "GT1": {
-            "GS1": 3,
-            "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Element:{6e8f798c-59ff-43af-a66f-774a3220eb16}].[Parameter:{9d87bb6e-3b64-44df-a093-f696dc640d4c}].[EntityColumn:{2e67ed07-c4de-285b-fc41-4f1757cbde02}]#]",
             "GS5": "551cf61b-389c-4db4-b3fd-6bd733157bd2"
           }
         },
@@ -1106,23 +1091,6 @@
                 "GS5": "551cf61b-389c-4db4-b3fd-6bd733157bd2"
               },
               "L9": "623375a9-cb7b-4e1c-a8ed-2be9b50429b3",
-              "L11": false
-            },
-            {
-              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
-              "UId": "e26b6249-dd30-452f-85b9-22b909ad6250",
-              "A2": "RocaAmortizationParentObject",
-              "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
-              "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
-              "IL2": "ac19109f-ad9c-4bc9-a714-b93830f6ee05",
-              "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
-              "L8": {
-                "GS1": 3,
-                "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Element:{6e8f798c-59ff-43af-a66f-774a3220eb16}].[Parameter:{9d87bb6e-3b64-44df-a093-f696dc640d4c}].[EntityColumn:{2e67ed07-c4de-285b-fc41-4f1757cbde02}]#]",
-                "GS5": "551cf61b-389c-4db4-b3fd-6bd733157bd2"
-              },
-              "L6": true,
-              "L9": "ff3c1ac8-f124-4514-a255-ba248965fbee",
               "L11": false
             },
             {

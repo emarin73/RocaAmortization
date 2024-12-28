@@ -105,7 +105,8 @@ namespace Terrasoft.Core.Process.Configuration
             decimal loanAmount,
             decimal rate,
             Guid gracePeriodIntMethod,
-            Guid parameterId)
+            Guid parameterId,
+            Guid parentObjectTypeId)
         {
             // Calculate interest for partial first month
             DateTime endOfMonth = GetEndOfMonth(firstDisbursementDate);
@@ -117,22 +118,41 @@ namespace Terrasoft.Core.Process.Configuration
             var gracePeriodEntry = schema.CreateEntity(UserConnection);
             gracePeriodEntry.SetDefColumnValues();
             gracePeriodEntry.PrimaryColumnValue = Guid.NewGuid();
-            gracePeriodEntry.SetColumnValue("RocaAmortParameterId", parameterId);
-            gracePeriodEntry.SetColumnValue("RocaAmortizationNumber", "GPD0000");
-            gracePeriodEntry.SetColumnValue("RocaPeriodNumber", 0);
-            gracePeriodEntry.SetColumnValue("RocaAmortizationDate", endOfMonth);
-            gracePeriodEntry.SetColumnValue("RocaAmortizationBeginningBalance", loanAmount);
-            gracePeriodEntry.SetColumnValue("RocaAmortizationPrincipal", 0);
+
+            var parentObjectTypeName = GetParentObjectTypeName(UserConnection, parentObjectTypeId);
+
+            // Set the parameterId in the appropriate column based on parentObjectType      
+            switch (parentObjectTypeName)
+            {
+                case "Test Parameters":
+                    gracePeriodEntry.SetColumnValue(RocaAmortParameterId, parameterId);
+                    break;
+                case "Loan":
+                    gracePeriodEntry.SetColumnValue(RocaAmortizationLoanId, parameterId);
+                    break;
+                case "Application":
+                    gracePeriodEntry.SetColumnValue(RocaAmortizationApplicationNumberId, parameterId);
+                    break;
+                case "Inquiry":
+                    gracePeriodEntry.SetColumnValue(RocaLoanInquiryId, parameterId);
+                    break;
+            }
+
+            gracePeriodEntry.SetColumnValue(RocaAmortizationNumber, "GPD0000");
+            gracePeriodEntry.SetColumnValue(RocaPeriodNumber, 0);
+            gracePeriodEntry.SetColumnValue(RocaAmortizationDate, endOfMonth);
+            gracePeriodEntry.SetColumnValue(RocaAmortizationBeginningBalance, loanAmount);
+            gracePeriodEntry.SetColumnValue(RocaAmortizationPrincipal, 0);
             if (gracePeriodInterestMethod == "1. Due On Cycle From Disbursement Date" || gracePeriodInterestMethod == "2. Accrual Of Interest For Balloon Payment")
             {
                 gracePeriodEntry.SetColumnValue("RocaAmortizationInterest", initialInterest);
             }
             else
             {
-                gracePeriodEntry.SetColumnValue("RocaAmortizationInterest", 0);
+                gracePeriodEntry.SetColumnValue(RocaAmortizationInterest, 0);
             }
-            gracePeriodEntry.SetColumnValue("RocaAmortizationAmount", 0m);
-            gracePeriodEntry.SetColumnValue("RocaAmortizationEndingBalance", loanAmount);
+            gracePeriodEntry.SetColumnValue(RocaAmortizationAmount, 0m);
+            gracePeriodEntry.SetColumnValue(RocaAmortizationEndingBalance, loanAmount);
             
             gracePeriodEntry.Save();
         }
@@ -154,6 +174,17 @@ namespace Terrasoft.Core.Process.Configuration
             Guid gracePeriodCycle,
             Guid parentObjectTypeId)
         {
+            // Make sure parameterId exists in the parent table
+            if (parameterId == Guid.Empty)
+            {
+                throw new InvalidOperationException("Invalid Parameter ID");
+            }
+            // Make sure parentObjectTypeId exists in the parent table
+            if (parentObjectTypeId == Guid.Empty)
+            {
+                throw new InvalidOperationException("Invalid Parent Object Type ID");
+            }
+            
             var schema = userConnection.EntitySchemaManager.GetInstanceByName("RocaLoanAmortizationTable");
 
             // Delete existing entries
@@ -172,7 +203,7 @@ namespace Terrasoft.Core.Process.Configuration
                 {
                     case "1. Due On Cycle From Disbursement Date":
                         // Generate initial grace period (GPD0000)
-                        GenerateInitialGracePeriod(schema, firstDisbursementDate, loanAmount, rate, gracePeriodIntMethod, parameterId);
+                        GenerateInitialGracePeriod(schema, firstDisbursementDate, loanAmount, rate, gracePeriodIntMethod, parameterId, parentObjectTypeId);
                         // Handle interest payments during grace period based on cycle
                         for (int gpIndex = 1; gpIndex <= gracePeriodMonths; gpIndex++)
                         {
@@ -232,7 +263,7 @@ namespace Terrasoft.Core.Process.Configuration
 
                     case "3. No Calculation Of Interest During Grace Period":
                         // Generate initial grace period (GPD0000)
-                        GenerateInitialGracePeriod(schema, firstDisbursementDate, loanAmount, rate, gracePeriodIntMethod, parameterId);
+                        GenerateInitialGracePeriod(schema, firstDisbursementDate, loanAmount, rate, gracePeriodIntMethod, parameterId, parentObjectTypeId);
                         // Handle interest payments during grace period based on cycle  
                         for (int noIntIndex = 1; noIntIndex <= gracePeriodMonths; noIntIndex++)
                         {
@@ -332,18 +363,21 @@ namespace Terrasoft.Core.Process.Configuration
                     
                     DateTime paymentDate = GetEndOfMonth(firstDisbursementDate.AddMonths(gracePeriodMonths));
                     // 5. Populate schedule entry
-                    scheduleInitialEntry.SetColumnValue("RocaAmortParameterId", parameterId);
-                    scheduleInitialEntry.SetColumnValue("RocaAmortizationNumber", "A00001");
-                    scheduleInitialEntry.SetColumnValue("RocaAmortizationDate", paymentDate);      
-                    scheduleInitialEntry.SetColumnValue("RocaPeriodNumber", gracePeriodMonths+1);
-                    scheduleInitialEntry.SetColumnValue("RocaAmortizationBeginningBalance", previousBalance);
-                    scheduleInitialEntry.SetColumnValue("RocaAmortizationAmount", amortizationAmount);      
-                    scheduleInitialEntry.SetColumnValue("RocaAmortizationPrincipal", principalPayment);
-                    scheduleInitialEntry.SetColumnValue("RocaAmortizationInterest", interestPayment);
-                    scheduleInitialEntry.SetColumnValue("RocaAmortizationEndingBalance", newBalance);   
-
-                    scheduleInitialEntry.Save();
-                    amortizationTable.Add(scheduleInitialEntry);
+                    var scheduleInitialEntryFixedPrincipal = CreateScheduleEntry(
+                        schema,             // schema
+                        userConnection,     // userConnection
+                        parameterId,        // parameterId
+                        "A00001",           // amortizationNo
+                        gracePeriodMonths + 1, // periodNumber
+                        paymentDate,        // paymentDate
+                        previousBalance,    // beginningBalance
+                        principalPayment,   // principal
+                        interestPayment,    // interest
+                        amortizationAmount,      // amount
+                        newBalance,         // endingBalance
+                        parentObjectTypeId);      // parent Object GUID
+                    
+                    amortizationTable.Add(scheduleInitialEntryFixedPrincipal);
                     previousBalance = newBalance;   
                     installment = 0;
          
@@ -360,12 +394,6 @@ namespace Terrasoft.Core.Process.Configuration
            int n = 1;
             for (int m = startingPeriod; m < (numberOfPayments + gracePeriodMonths +1); m++)
             {
-                var scheduleEntry = schema.CreateEntity(userConnection);
-                // Set required fields
-                scheduleEntry.SetDefColumnValues();
-                scheduleEntry.PrimaryColumnValue = Guid.NewGuid();
-                scheduleEntry.SetColumnValue("RocaAmortizationNumber", "A" + (n + 1).ToString("00000"));
-                n++;
                 // 5. Calculate payment date
                 DateTime paymentDate = firstDisbursementDate.AddMonths(m * paymentIntervalMonths);
                 paymentDate = GetEndOfMonth(paymentDate);
@@ -384,20 +412,23 @@ namespace Terrasoft.Core.Process.Configuration
 
                     // 4. Calculate new ending balance
                     decimal newBalance = previousBalance - principalPayment;
-                    
-                    
+                                        
                     // 6. Populate schedule entry
-                    scheduleEntry.SetColumnValue("RocaAmortParameterId", parameterId);
-                    scheduleEntry.SetColumnValue("RocaAmortizationDate", paymentDate);
-                    scheduleEntry.SetColumnValue("RocaPeriodNumber", m);
-                    scheduleEntry.SetColumnValue("RocaAmortizationBeginningBalance", previousBalance);
-                    scheduleEntry.SetColumnValue("RocaAmortizationAmount", paymentAmount);
-                    scheduleEntry.SetColumnValue("RocaAmortizationPrincipal", principalPayment);
-                    scheduleEntry.SetColumnValue("RocaAmortizationInterest", interestPayment);
-                    scheduleEntry.SetColumnValue("RocaAmortizationEndingBalance", newBalance);
-
-                    scheduleEntry.Save();
-                    amortizationTable.Add(scheduleEntry);
+                    var scheduleEntryAmortized = CreateScheduleEntry(
+                        schema,             // schema
+                        userConnection,     // userConnection
+                        parameterId,        // parameterId
+                        "A" + (n + 1).ToString("00000"), // amortizationNo
+                        m, // periodNumber
+                        paymentDate, // paymentDate
+                        previousBalance, // beginningBalance
+                        principalPayment, // principal
+                        interestPayment, // interest
+                        paymentAmount, // amount
+                        newBalance, // endingBalance
+                        parentObjectTypeId); // parent Object GUID
+                    n++;
+                    amortizationTable.Add(scheduleEntryAmortized);
                     previousBalance = newBalance;   
                 }
                 else if (loanTypeCode == "2. Fixed Principal")
@@ -415,17 +446,21 @@ namespace Terrasoft.Core.Process.Configuration
                     decimal newBalance = previousBalance - principalPayment;        
 
                     // 5. Populate schedule entry
-                    scheduleEntry.SetColumnValue("RocaAmortParameterId", parameterId);
-                    scheduleEntry.SetColumnValue("RocaAmortizationDate", paymentDate);      
-                    scheduleEntry.SetColumnValue("RocaPeriodNumber", m);
-                    scheduleEntry.SetColumnValue("RocaAmortizationBeginningBalance", previousBalance);
-                    scheduleEntry.SetColumnValue("RocaAmortizationAmount", amortizationAmount);      
-                    scheduleEntry.SetColumnValue("RocaAmortizationPrincipal", principalPayment);
-                    scheduleEntry.SetColumnValue("RocaAmortizationInterest", interestPayment);
-                    scheduleEntry.SetColumnValue("RocaAmortizationEndingBalance", newBalance);   
-
-                    scheduleEntry.Save();
-                    amortizationTable.Add(scheduleEntry);
+                    var scheduleEntryFixedPrincipal = CreateScheduleEntry(
+                        schema,             // schema
+                        userConnection,     // userConnection
+                        parameterId,        // parameterId
+                        "A" + (n + 1).ToString("00000"), // amortizationNo
+                        m, // periodNumber
+                        paymentDate, // paymentDate
+                        previousBalance, // beginningBalance
+                        principalPayment, // principal
+                        interestPayment, // interest
+                        amortizationAmount, // amount
+                        newBalance, // endingBalance
+                        parentObjectTypeId); // parent Object GUID
+                    n++;
+                    amortizationTable.Add(scheduleEntryFixedPrincipal);
                     previousBalance = newBalance;   
                 }
             }
@@ -543,28 +578,28 @@ namespace Terrasoft.Core.Process.Configuration
         switch (parentObjectTypeName)
         {
             case "Test Parameters":
-                entry.SetColumnValue("RocaAmortParameterId", parameterId);
+                entry.SetColumnValue(RocaAmortParameterId, parameterId);
                 // entry.SetColumnValue("RocaAmortizationLoan", null);
                 // entry.SetColumnValue("RocaAmortizationApplicationNumber", null);
                 // entry.SetColumnValue("RocaLoanInquiry", null);
                 break;
 
             case "Loan":
-                entry.SetColumnValue("RocaAmortizationLoanId", parameterId);
+                entry.SetColumnValue(RocaAmortizationLoanId, parameterId);
                 // entry.SetColumnValue("RocaAmortParameter", null);
                 // entry.SetColumnValue("RocaAmortizationApplicationNumber", null);
                 // entry.SetColumnValue("RocaLoanInquiry", null);
                 break;
 
             case "Application":
-                entry.SetColumnValue("RocaAmortizationApplicationNumberId", parameterId);
+                entry.SetColumnValue(RocaAmortizationApplicationNumberId, parameterId);
                 //  entry.SetColumnValue("RocaAmortParameter", null);
                 // entry.SetColumnValue("RocaAmortizationLoan", null);
                 // entry.SetColumnValue("RocaLoanInquiry", null);
                 break;
 
             case "Inquiry":
-                entry.SetColumnValue("RocaLoanInquiryId", parameterId);
+                entry.SetColumnValue(RocaLoanInquiryId, parameterId);
                 // entry.SetColumnValue("RocaAmortParameter", null);
                 // entry.SetColumnValue("RocaAmortizationLoan", null);
                 // entry.SetColumnValue("RocaAmortizationApplicationNumber", null);
@@ -575,13 +610,13 @@ namespace Terrasoft.Core.Process.Configuration
         }
       
         entry.SetColumnValue(RocaAmortizationNumber, amortizationNo);
-        entry.SetColumnValue("RocaPeriodNumber", periodNumber);
-        entry.SetColumnValue("RocaAmortizationDate", paymentDate);
-        entry.SetColumnValue("RocaAmortizationBeginningBalance", beginningBalance);
-        entry.SetColumnValue("RocaAmortizationPrincipal", principal);
-        entry.SetColumnValue("RocaAmortizationInterest", interest);
-        entry.SetColumnValue("RocaAmortizationAmount", amount);
-        entry.SetColumnValue("RocaAmortizationEndingBalance", endingBalance);
+        entry.SetColumnValue(RocaPeriodNumber, periodNumber);
+        entry.SetColumnValue(RocaAmortizationDate, paymentDate);
+        entry.SetColumnValue(RocaAmortizationBeginningBalance, beginningBalance);
+        entry.SetColumnValue(RocaAmortizationPrincipal, principal);
+        entry.SetColumnValue(RocaAmortizationInterest, interest);
+        entry.SetColumnValue(RocaAmortizationAmount, amount);
+        entry.SetColumnValue(RocaAmortizationEndingBalance, endingBalance);
         
         entry.Save();
         

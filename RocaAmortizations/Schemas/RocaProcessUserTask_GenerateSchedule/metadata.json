@@ -13,6 +13,83 @@
           "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
           "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
           "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "bf5eee89-a573-13cd-d25c-d4c6b7d697e3",
+          "A2": "RocaLoanInquiryId",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "05c81a49-6717-10d8-69c9-2e13316abf16",
+          "A2": "RocaAmortizationApplicationNumberId",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "315cada2-3592-20a7-23df-6277e8bc00eb",
+          "A2": "RocaAmortizationLoanId",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "e559bb61-6a00-260f-7ed6-ddf511d2a309",
+          "A2": "RocaAmortParameterId",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "738aa6f3-e098-da38-e07b-4496d4616848",
+          "A2": "RocaAmortizationEndingBalance",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "4d8949a5-7dce-9e73-43c4-f79f2d55166c",
+          "A2": "RocaAmortizationAmount",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "7735fd01-51c9-60dd-75d4-887ead6fcfdf",
+          "A2": "RocaAmortizationInterest",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "4f919513-adee-e626-a84e-0f1bd8f9eaa6",
+          "A2": "RocaAmortizationPrincipal",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "6bbeb444-d753-dabd-a702-ad4e8e25e9ec",
+          "A2": "RocaAmortizationBeginningBalance",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "212edf03-d9f8-a446-a0cb-f2aa434c5a3a",
+          "A2": "RocaAmortizationDate",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
+        },
+        {
+          "UId": "b5faa537-caac-7560-331f-87306b4732e5",
+          "A2": "RocaPeriodNumber",
+          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
+          "A5": "87efb744-b9ae-4f3d-a725-0b0586c21657"
         }
       ],
       "B3": [],
@@ -174,18 +251,6 @@
           "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
           "L8": {},
           "L9": "623375a9-cb7b-4e1c-a8ed-2be9b50429b3",
-          "L11": false
-        },
-        {
-          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
-          "UId": "3c3d27e8-5aec-3ada-a655-47d73235f58c",
-          "A2": "RocaAmortizationParentObject",
-          "A3": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
-          "A4": "0cfa8cc9-5a34-4f14-a514-fe116ae9f504",
-          "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
-          "L8": {},
-          "L6": true,
-          "L9": "ff3c1ac8-f124-4514-a255-ba248965fbee",
           "L11": false
         },
         {

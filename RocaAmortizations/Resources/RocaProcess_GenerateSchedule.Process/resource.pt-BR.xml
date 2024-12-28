@@ -2,25 +2,6 @@
 <Resources Culture="pt-BR">
 	<Group Type="String">
 		<Items>
-			<Item Name="BaseElements.ReadParameters.Parameters.AggregationColumnName.Caption" Value="Nome da coluna da função agregada" />
-			<Item Name="BaseElements.ReadParameters.Parameters.CanReadUncommitedData.Caption" Value="Ler os dados não confirmados" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ConsiderTimeInFilter.Caption" Value="Considerar hora nos filtros" />
-			<Item Name="BaseElements.ReadParameters.Parameters.DataSourceFilters.Caption" Value="Fonte de dados dos filtros" />
-			<Item Name="BaseElements.ReadParameters.Parameters.EntityColumnMetaPathes.Caption" Value="Colunas a serem lidas" />
-			<Item Name="BaseElements.ReadParameters.Parameters.FunctionType.Caption" Value="Tipo de função agregada" />
-			<Item Name="BaseElements.ReadParameters.Parameters.IgnoreDisplayValues.Caption" Value="Não ler os valores exibidos das colunas da pesquisa" />
-			<Item Name="BaseElements.ReadParameters.Parameters.NumberOfRecords.Caption" Value="Número de registros a serem lidos" />
-			<Item Name="BaseElements.ReadParameters.Parameters.OrderInfo.Caption" Value="Ordem das colunas" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ReadSomeTopRecords.Caption" Value="Ler o primeiro" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ResultCompositeObjectList.Caption" Value="Coleção de registros" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ResultCount.Caption" Value="Número de registros" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ResultDateTimeFunction.Caption" Value="Resultado da função" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ResultEntity.Caption" Value="Primeiro item da coleção resultante" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ResultEntityCollection.Caption" Value="Coleção resultante" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ResultFloatFunction.Caption" Value="Resultado da função" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ResultIntegerFunction.Caption" Value="Resultado da função" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ResultRowsCount.Caption" Value="Número de registros lidos" />
-			<Item Name="BaseElements.ReadParameters.Parameters.ResultType.Caption" Value="Tipo de resultado" />
 			<Item Name="Caption" Value="Generate Schedule" />
 		</Items>
 	</Group>

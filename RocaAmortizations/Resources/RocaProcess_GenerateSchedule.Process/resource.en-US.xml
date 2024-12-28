@@ -60,8 +60,6 @@
 			<Item Name="BaseElements.UserTask2.Caption" Value="Generate Schedule" />
 			<Item Name="BaseElements.UserTask2.Parameters.Roca1stDisbursementDate.Caption" Value="1st Disbursement Date" />
 			<Item Name="BaseElements.UserTask2.Parameters.Roca1stDisbursementDate.DisplayValue" Value="[#Read Parameters.First item of resulting collection.1st Disbursement Date#]" />
-			<Item Name="BaseElements.UserTask2.Parameters.RocaAmortizationParentObject.Caption" Value="Amortization Parent Object" />
-			<Item Name="BaseElements.UserTask2.Parameters.RocaAmortizationParentObject.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Amortization Parameter Object#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaAmortizationTable.Caption" Value="Amortization Table" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaCompoundFrequency.Caption" Value="Compound Frequency" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaCompoundFrequency.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Compound Frequency#]" />
@@ -79,7 +77,7 @@
 			<Item Name="BaseElements.UserTask2.Parameters.RocaLoanType.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Loan Type#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaParameterId.Caption" Value="Parameter Id" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaParameterId.DisplayValue" Value="[#Parameter Id#]" />
-			<Item Name="BaseElements.UserTask2.Parameters.RocaParentObject.Caption" Value="Parameter Parent Object" />
+			<Item Name="BaseElements.UserTask2.Parameters.RocaParentObject.Caption" Value="Amortization Table Parent Object" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaParentObject.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Amortization Parameter Object#]" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaPaymentFrequency.Caption" Value="Payment Frequency" />
 			<Item Name="BaseElements.UserTask2.Parameters.RocaPaymentFrequency.DisplayValue" Value="[#Read Parameters.First item of resulting collection.Payment Frequency#]" />
